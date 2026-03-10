@@ -1,7 +1,7 @@
 import React from "react";
-import "./pages.css";
+import "../pages.css";
 
-export function Historia() {
+export function HistoriaJuan() {
   return (
     <div className="page-container">
       <header className="page-header text-center">
@@ -19,10 +19,10 @@ export function Historia() {
       </section>
 
       <div className="grid-2">
-        <div className="card highlight-card border-dark">
+        <div className="card highlight-card border-accent">
           <h2
             style={{
-              color: "var(--color-dark)",
+              color: "var(--color-accent)",
               marginBottom: "1rem",
               borderBottom: "1px solid var(--color-border)",
               paddingBottom: "0.5rem",
@@ -102,10 +102,10 @@ export function Historia() {
           </p>
         </div>
 
-        <div className="card highlight-card border-dark">
+        <div className="card highlight-card border-accent">
           <h2
             style={{
-              color: "var(--color-dark)",
+              color: "var(--color-accent)",
               marginBottom: "1rem",
               borderBottom: "1px solid var(--color-border)",
               paddingBottom: "0.5rem",

@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Routes, Route, Link, useParams, useNavigate } from "react-router-dom";
-import capitulosData from "../data/capitulos.json";
-import "./pages.css";
+import capitulosData from "../../data/capitulosMateo.json";
+import "../pages.css";
 
 function CapituloMenu() {
   return (
     <div className="page-container">
       <header className="page-header text-center">
-        <h1 className="title-large">El Evangelio de Juan</h1>
+        <h1 className="title-large">El Evangelio de Mateo</h1>
         <p className="subtitle">
           Selecciona un capítulo para leer el texto y su análisis teológico.
         </p>
@@ -16,7 +16,7 @@ function CapituloMenu() {
       <div className="features-grid">
         {capitulosData.map((cap) => (
           <Link
-            to={`/capitulos/${cap.capitulo}`}
+            to={`/mateo/capitulos/${cap.capitulo}`}
             key={cap.capitulo}
             className="card feature-item hover-card"
             style={{ textDecoration: "none" }}
@@ -24,11 +24,28 @@ function CapituloMenu() {
             <h3 className="mb-2" style={{ color: "var(--color-accent)" }}>
               Capítulo {cap.capitulo}
             </h3>
-            <p style={{ color: "var(--color-dark)", fontWeight: "500" }}>
+            <p style={{ color: "var(--color-text)", fontWeight: "500" }}>
               {cap.titulo}
             </p>
           </Link>
         ))}
+      </div>
+
+      <div style={{ textAlign: "center", marginTop: "3rem" }}>
+        <Link
+          to="/mateo"
+          style={{
+            padding: "10px 20px",
+            background: "var(--color-accent)",
+            color: "white",
+            textDecoration: "none",
+            borderRadius: "4px",
+            fontFamily: "var(--font-ui)",
+            display: "inline-block",
+          }}
+        >
+          Volver a Introducción
+        </Link>
       </div>
     </div>
   );
@@ -48,16 +65,19 @@ function CapituloDetalle() {
 
   if (!capitulo) {
     return (
-      <div className="text-center mt-5">
+      <div className="page-container text-center mt-5">
         <h2>Capítulo no encontrado</h2>
+        <p>Aún estamos preparando la exégesis de este capítulo.</p>
         <button
-          onClick={() => navigate("/capitulos")}
+          onClick={() => navigate("/mateo/capitulos")}
           style={{
             padding: "10px 20px",
             background: "var(--color-accent)",
             color: "white",
             borderRadius: "4px",
             marginTop: "20px",
+            border: "none",
+            cursor: "pointer",
           }}
         >
           Volver a Capítulos
@@ -69,7 +89,7 @@ function CapituloDetalle() {
   return (
     <div className="page-container">
       <button
-        onClick={() => navigate("/capitulos")}
+        onClick={() => navigate("/mateo/capitulos")}
         style={{
           border: "none",
           background: "none",
@@ -89,7 +109,7 @@ function CapituloDetalle() {
         className="page-header text-center"
         style={{ marginBottom: "2rem" }}
       >
-        <h1 className="title-large">Juan {capitulo.capitulo}</h1>
+        <h1 className="title-large">Mateo {capitulo.capitulo}</h1>
         <p className="subtitle">{capitulo.titulo}</p>
       </header>
 
@@ -101,7 +121,7 @@ function CapituloDetalle() {
         >
           <h2
             style={{
-              color: "var(--color-dark)",
+              color: "var(--color-accent)",
               marginBottom: "1rem",
               fontSize: "1.4rem",
             }}
@@ -112,12 +132,12 @@ function CapituloDetalle() {
         </section>
 
         <section
-          className="card highlight-card border-dark"
+          className="card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2
             style={{
-              color: "var(--color-dark)",
+              color: "var(--color-accent)",
               marginBottom: "1rem",
               fontSize: "1.4rem",
             }}
@@ -178,7 +198,13 @@ function CapituloDetalle() {
 
       {/* Texto Bíblico Completo */}
       <section className="content-section card">
-        <h2 style={{ textAlign: "center", marginBottom: "2rem" }}>
+        <h2
+          style={{
+            textAlign: "center",
+            marginBottom: "2rem",
+            color: "var(--color-accent)",
+          }}
+        >
           Texto Bíblico (RVR1960)
         </h2>
         <div
@@ -218,7 +244,7 @@ function CapituloDetalle() {
       >
         {capNum > 1 ? (
           <button
-            onClick={() => navigate(`/capitulos/${capNum - 1}`)}
+            onClick={() => navigate(`/mateo/capitulos/${capNum - 1}`)}
             style={{
               padding: "10px 20px",
               background: "white",
@@ -235,9 +261,9 @@ function CapituloDetalle() {
           <div />
         )}
 
-        {capNum < 21 ? (
+        {capNum < capitulosData.length ? (
           <button
-            onClick={() => navigate(`/capitulos/${capNum + 1}`)}
+            onClick={() => navigate(`/mateo/capitulos/${capNum + 1}`)}
             style={{
               padding: "10px 20px",
               background: "var(--color-accent)",
@@ -258,7 +284,7 @@ function CapituloDetalle() {
   );
 }
 
-export function Capitulos() {
+export function CapitulosMateo() {
   return (
     <Routes>
       <Route path="/" element={<CapituloMenu />} />

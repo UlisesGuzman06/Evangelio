@@ -1,7 +1,7 @@
 import React from "react";
-import "./pages.css";
+import "../pages.css";
 
-export function Estructura() {
+export function EstructuraJuan() {
   return (
     <div className="page-container">
       <header className="page-header text-center">
@@ -50,7 +50,7 @@ export function Estructura() {
 
         {/* 2. Libro de los Signos */}
         <div
-          className="feature-item card highlight-card border-dark"
+          className="feature-item card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2>2. El Libro de los Signos (Juan 1:19 – 12:50)</h2>
@@ -109,7 +109,7 @@ export function Estructura() {
 
         {/* 4. Epilogo */}
         <div
-          className="feature-item card highlight-card border-dark"
+          className="feature-item card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2>4. El Epílogo (Juan 21)</h2>

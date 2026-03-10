@@ -1,7 +1,7 @@
 import React from "react";
-import "./pages.css";
+import "../pages.css";
 
-export function Introduccion() {
+export function IntroduccionJuan() {
   return (
     <div className="page-container">
       <header className="page-header text-center">
@@ -39,7 +39,7 @@ export function Introduccion() {
           </p>
         </section>
 
-        <section className="content-section card highlight-card border-dark">
+        <section className="content-section card highlight-card border-accent">
           <h2>Contexto Histórico</h2>
           <p>
             Fue escrito en una época donde la iglesia naciente enfrentaba varios

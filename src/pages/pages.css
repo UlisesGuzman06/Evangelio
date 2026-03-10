@@ -128,14 +128,14 @@
   background: white;
   padding: 1.5rem;
   border-radius: 6px;
-  border-left: 3px solid var(--color-accent);
+  border-top: 3px solid var(--color-accent);
   box-shadow: var(--shadow-sm);
 }
 
 .feature-item h3 {
   font-size: 1.2rem;
   margin-bottom: 0.8rem;
-  color: var(--color-dark);
+  color: var(--color-accent);
 }
 
 .feature-item p {

@@ -1,10 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* We are using Vanilla CSS, so we won't use Tailwind heavily, 
-   but it's good to keep basic resets if it's there. Since we didn't install Tailwind, 
-   let's remove the Tailwind directives and write pure CSS. */
+/* Vanilla CSS Custom Properties and Reset */
 
 :root {
   /* Colors */
@@ -13,6 +7,7 @@
   --color-text: #2f2f2f;
   --color-text-light: #5a5a5a;
   --color-accent: #b5985a;
+  --color-accent-rgb: 181, 152, 90;
   --color-accent-hover: #9c8045;
   --color-dark: #1f1f1f;
 

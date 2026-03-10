@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "./pages.css";
+import "../pages.css";
 
-export function Conclusion() {
+export function ConclusionJuan() {
   return (
     <div className="page-container">
       <header className="page-header text-center">
@@ -99,7 +99,7 @@ export function Conclusion() {
         }}
       >
         <Link
-          to="/capitulos"
+          to="/juan/capitulos"
           style={{
             display: "inline-block",
             padding: "15px 30px",

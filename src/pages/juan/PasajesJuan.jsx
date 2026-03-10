@@ -1,7 +1,7 @@
 import React from "react";
-import "./pages.css";
+import "../pages.css";
 
-export function Pasajes() {
+export function PasajesJuan() {
   return (
     <div className="page-container">
       <header className="page-header text-center">
@@ -56,7 +56,7 @@ export function Pasajes() {
 
         {/* Nicodemo */}
         <div
-          className="feature-item card highlight-card border-dark"
+          className="feature-item card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2>2. Nicodemo y el Nuevo Nacimiento (Juan 3:1-21)</h2>
@@ -122,7 +122,7 @@ export function Pasajes() {
 
         {/* El Pan de Vida */}
         <div
-          className="feature-item card highlight-card border-dark"
+          className="feature-item card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2>4. El Pan de Vida (Juan 6:25-59)</h2>
@@ -182,7 +182,7 @@ export function Pasajes() {
 
         {/* El Lavatorio */}
         <div
-          className="feature-item card highlight-card border-dark"
+          className="feature-item card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2>6. El Lavatorio de los Pies (Juan 13:1-17)</h2>
@@ -240,7 +240,7 @@ export function Pasajes() {
 
         {/* La Resurrección */}
         <div
-          className="feature-item card highlight-card border-dark"
+          className="feature-item card highlight-card border-accent"
           style={{ padding: "2rem" }}
         >
           <h2>8. La Resurrección (Juan 20 - 21)</h2>

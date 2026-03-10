@@ -7,26 +7,47 @@ import {
   Info,
   Compass,
   Sunrise,
+  ArrowLeft,
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import "./Layout.css";
 
 const navItems = [
-  { path: "/", label: "Introducción", icon: <Info size={20} /> },
-  { path: "/estructura", label: "Estructura", icon: <BookOpen size={20} /> },
-  { path: "/capitulos", label: "Capítulos", icon: <FileText size={20} /> },
-  { path: "/temas", label: "Temas Principales", icon: <Compass size={20} /> },
-  { path: "/pasajes", label: "Pasajes Clave", icon: <Sunrise size={20} /> },
-  { path: "/teologia", label: "Enfoque Teológico", icon: <Info size={20} /> },
+  { path: "/mateo", label: "Introducción", icon: <Info size={20} /> },
   {
-    path: "/historia",
+    path: "/mateo/estructura",
+    label: "Estructura",
+    icon: <BookOpen size={20} />,
+  },
+  {
+    path: "/mateo/capitulos",
+    label: "Capítulos",
+    icon: <FileText size={20} />,
+  },
+  {
+    path: "/mateo/temas",
+    label: "Temas Principales",
+    icon: <Compass size={20} />,
+  },
+  {
+    path: "/mateo/pasajes",
+    label: "Pasajes Clave",
+    icon: <Sunrise size={20} />,
+  },
+  {
+    path: "/mateo/teologia",
+    label: "Enfoque Teológico",
+    icon: <Info size={20} />,
+  },
+  {
+    path: "/mateo/historia",
     label: "Contexto Histórico",
     icon: <BookOpen size={20} />,
   },
-  { path: "/conclusion", label: "Conclusión", icon: <Info size={20} /> },
+  { path: "/mateo/conclusion", label: "Conclusión", icon: <Info size={20} /> },
 ];
 
-export function Layout({ children }) {
+export function LayoutMateo({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const location = useLocation();
 
@@ -45,8 +66,8 @@ export function Layout({ children }) {
             {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <div className="logo">
-            <Link to="/">
-              <h1>El Evangelio de Juan</h1>
+            <Link to="/mateo">
+              <h1>El Evangelio de Mateo</h1>
             </Link>
           </div>
         </div>
@@ -56,11 +77,27 @@ export function Layout({ children }) {
         {/* Sidebar */}
         <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
           <nav className="sidebar-nav">
+            <Link
+              to="/"
+              className="nav-item"
+              style={{
+                borderBottom: "1px solid var(--color-border)",
+                marginBottom: "0.5rem",
+                paddingBottom: "1rem",
+                color: "var(--color-dark)",
+              }}
+              onClick={() => setSidebarOpen(false)}
+            >
+              <span className="nav-icon">
+                <ArrowLeft size={20} />
+              </span>
+              <span className="nav-label">Volver a Evangelios</span>
+            </Link>
             {navItems.map((item) => (
               <Link
                 key={item.path}
                 to={item.path}
-                className={`nav-item ${location.pathname === item.path ? "active" : ""}`}
+                className={`nav-item ${location.pathname === item.path || (item.path === "/mateo/capitulos" && location.pathname.startsWith("/mateo/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >
                 <span className="nav-icon">{item.icon}</span>
@@ -84,7 +121,7 @@ export function Layout({ children }) {
       {/* Footer */}
       <footer className="footer">
         <div className="container">
-          <p>Un estudio profundo sobre el cuarto evangelio.</p>
+          <p>Un estudio profundo sobre el Evangelio de Mateo.</p>
         </div>
       </footer>
     </div>
