@@ -31,7 +31,7 @@ export function Home() {
       >
         <div className="page-container" style={{ marginTop: "0" }}>
           <header className="page-header text-center">
-            <h1 className="title-large">Los Cuatro Evangelios</h1>
+            <h1 className="title-large">La Palabra que se hizo carne</h1>
             <p className="subtitle">
               Explora los relatos de la vida, enseñanzas, muerte y resurrección
               de Jesucristo.
@@ -301,7 +301,7 @@ export function Home() {
       {/* Footer Minimalista */}
       <footer className="footer" style={{ borderTop: "none", paddingTop: "0" }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <p>Un estudio profundo sobre los evangelios.</p>
+          <p>Un estudio profundo sobre La Santa Biblia.</p>
         </div>
       </footer>
     </div>

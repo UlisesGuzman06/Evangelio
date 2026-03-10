@@ -91,7 +91,7 @@ export function LayoutMateo({ children }) {
               <span className="nav-icon">
                 <ArrowLeft size={20} />
               </span>
-              <span className="nav-label">Volver a Evangelios</span>
+              <span className="nav-label">Volver a La Santa Biblia</span>
             </Link>
             {navItems.map((item) => (
               <Link
