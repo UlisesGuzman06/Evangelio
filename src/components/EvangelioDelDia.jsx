@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BookOpen, ChevronRight, Loader, RefreshCw, ChevronDown, ChevronUp } from "lucide-react";
+import { BookOpen, ChevronRight, RefreshCw, ChevronDown, ChevronUp, Sparkles, Music } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Configuración de APIs
@@ -28,7 +28,6 @@ function parseReference(raw) {
   let clean = raw.replace(/<[^>]*>/g, "").replace(/\s+/g, " ").trim();
   
   // Ejemplos: "Mt 18,21-35", "Lc 1,1-4", "Jn 3,16"
-  // El formato de Evangelizo usa coma para separar capítulo de versículo
   const match = clean.match(/^([a-zA-ZáéíóúÁÉÍÓÚ]+)\s+(\d+),(\d+)(?:-(\d+))?$/);
   
   if (!match) return null;
@@ -54,34 +53,55 @@ function limpiarTexto(html) {
   let clean = html
     .replace(/<br\s*\/?>/gi, " ")
     .replace(/<[^>]*>/g, "")
-    // Borrar agresivamente cualquier mención al Libro del Pueblo de Dios o Evangelizo
     .split(/Extraído de la Biblia/i)[0]
     .split(/Para recibir cada mañana/i)[0]
     .split(/evangeliodeldia/i)[0]
     .trim();
     
   clean = decodeHTMLEntities(clean);
-  // Quitar la referencia si viene al inicio (ej: "Mt 18,21.")
-  return clean.replace(/\s+/g, " ").replace(/^([a-zA-ZáéíóúÁÉÍÓÚ]{1,3}\s+\d+,\d+[-]?\d*[\s.:]*)+/i, "").trim();
+  // Limpiar códigos de versículos al inicio o entre el texto si los hubiera
+  return clean
+    .replace(/\s+/g, " ")
+    .replace(/^([a-zA-ZáéíóúÁÉÍÓÚ]{1,3}\s+\d+,\d+[-]?\d*[a-z]*[\s.:]*)+/i, "")
+    .trim();
+}
+
+function limpiarReferenciaSalmo(ref) {
+  if (!ref) return "";
+  return ref
+    .replace(/<[^>]*>/g, "") // Quitar HTML
+    .replace(/Ps/g, "Salmo")  // Cambiar Ps por Salmo
+    .replace(/([0-9]+)[a-z]+/g, "$1") // Quitar sufijos técnicos como 4bc, 5ab
+    .replace(/\./g, ". ")      // Añadir espacio tras los puntos
+    .replace(/,/g, ", ")      // Añadir espacio tras las comas
+    .replace(/\s+/g, " ")     // Quitar espacios dobles
+    .trim();
 }
 
 export function EvangelioDelDia() {
   const [data, setData] = useState({
     texto: "",
     ref: "",
-    refParsed: null
+    refParsed: null,
+    santo: "",
+    santoBio: "",
+    santoId: "",
+    salmo: "",
+    salmoRef: "",
+    santoImage: "/santo_del_dia.png" // Imagen del santo del día
   });
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(false);
   const [visible, setVisible] = useState(false);
-  const [expanded, setExpanded] = useState(false);
+  const [expandedGsp, setExpandedGsp] = useState(false);
+  const [expandedPsl, setExpandedPsl] = useState(false);
 
   useEffect(() => {
-    async function fetchEvangelioCompleto() {
+    async function fetchLiturgiaCompleta() {
       try {
         const hoy = new Date().toISOString().slice(0, 10).replace(/-/g, "");
         
-        // 1. Obtener la referencia
+        // 1. Obtener la referencia del Evangelio
         const resRef = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=reading_st&content=GSP`);
         const rawRef = await resRef.text();
         const refParsed = parseReference(rawRef);
@@ -89,7 +109,7 @@ export function EvangelioDelDia() {
         let textoFinal = "";
 
         // 2. Intentar buscar en API.Bible (RVR1960)
-        if (refParsed && API_KEY && API_KEY !== "TU_API_KEY_AQUI") {
+        if (refParsed && API_KEY) {
           try {
             const resBible = await fetch(
               `${API_BIBLE_URL}/bibles/${BIBLE_ID}/passages/${refParsed.id}?content-type=text&include-notes=false&include-titles=false&include-chapter-numbers=false&include-verse-numbers=false`,
@@ -102,18 +122,107 @@ export function EvangelioDelDia() {
           } catch (e) { }
         }
 
-        // 3. Fallback a Evangelizo limpio
         if (!textoFinal) {
           const resText = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=reading&content=GSP`);
           const htmlText = await resText.text();
           textoFinal = limpiarTexto(htmlText);
         }
 
-        setData({
+        // Santo del Día (con ID para biografía e imagen)
+        let santoNombre = "";
+        let santoBio = "";
+        let santoResumen = "";
+        let santoImg = "";
+        let currentSantoId = "";
+        try {
+          // Primero obtenemos el nombre y el link (HTML)
+          const resSaint = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=saint`);
+          const rawSaint = await resSaint.text();
+          
+          // Extraer ID del link (ej: display_saint.php?id=...)
+          const idMatch = rawSaint.match(/id=([^"&'\s>]+)/);
+          if (idMatch) currentSantoId = idMatch[1];
+          
+          santoNombre = rawSaint
+            .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "")
+            .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")
+            .replace(/<[^>]*>/g, " ")
+            .split("\n")[0].trim();
+          
+          if (currentSantoId) {
+            const resBio = await fetch(`https://feed.evangelizo.org/v2/display_saint.php?id=${currentSantoId}&lang=SP`);
+            const htmlBio = await resBio.text();
+            
+            // Extraer imagen
+            const imgMatch = htmlBio.match(/https:\/\/files\.evangelizo\.org\/images\/santibeati\/[^"']+/);
+            if (imgMatch) santoImg = imgMatch[0];
+            
+            // Limpiar biografía (Extraer solo el texto relevante)
+            let cleanedBio = htmlBio
+              .replace(/<head>[\s\S]*?<\/head>/gi, "") // Eliminar cabecera HTML
+              .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "") // Eliminar scripts
+              .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, "")  // Eliminar estilos CSS
+              .replace(/<[^>]*>/g, " ") // Eliminar todas las etiquetas HTML
+              .replace(/\s+/g, " ") // Colapsar espacios
+              .trim();
+
+            // Función para decodificar entidades HTML (ej: &oacute; -> ó)
+            const decodeHtml = (html) => {
+              const txt = document.createElement("textarea");
+              txt.innerHTML = html;
+              return txt.value;
+            };
+
+            // Intentar encontrar el inicio real de la biografía tras los títulos
+            const markers = ["Biografía", "Vida de", "Santo del día:", "Saint of the day:"];
+            let bioText = cleanedBio;
+            
+            for (const marker of markers) {
+              if (cleanedBio.includes(marker)) {
+                const parts = cleanedBio.split(marker);
+                if (parts[1]) {
+                  bioText = parts[1].trim();
+                  break;
+                }
+              }
+            }
+
+            // Aplicar decodificación final
+            const fullBio = decodeHtml(bioText.trim());
+            santoBio = fullBio;
+            santoResumen = fullBio.substring(0, 200).trim() + "...";
+            santoNombre = decodeHtml(santoNombre);
+          }
+        } catch (e) {
+          console.log("Error fetching saint details:", e);
+        }
+
+        // Salmo del Día
+        let salmoTexto = "";
+        let salmoRef = "";
+        try {
+          const resPSL = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=reading&content=PS`);
+          const rawPSL = await resPSL.text();
+          salmoTexto = limpiarTexto(rawPSL);
+          
+          const resPSLRef = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=reading_st&content=PS`);
+          const rawPSLRef = await resPSLRef.text();
+          salmoRef = limpiarReferenciaSalmo(rawPSLRef);
+        } catch (e) {}
+
+        setData(prev => ({
+          ...prev,
           texto: textoFinal,
           ref: rawRef.replace(/<[^>]*>/g, "").replace(".", "").trim(),
-          refParsed: refParsed
-        });
+          refParsed: refParsed,
+          santo: santoNombre,
+          santoBio: santoBio,
+          santoResumen: santoResumen,
+          santoId: currentSantoId,
+          santoImage: santoImg || "/santo_del_dia.png",
+          salmo: salmoTexto,
+          salmoRef: salmoRef
+        }));
       } catch (err) {
         console.error(err);
         setError(true);
@@ -122,145 +231,227 @@ export function EvangelioDelDia() {
         setTimeout(() => setVisible(true), 50);
       }
     }
-    fetchEvangelioCompleto();
+    fetchLiturgiaCompleta();
   }, []);
 
-  const toggleExpand = () => setExpanded(!expanded);
-
-  const hoy = new Date();
-  const diasSemana = ["Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado"];
-  const meses = ["enero","febrero","marzo","abril","mayo","junio","julio","agosto","septiembre","octubre","noviembre","diciembre"];
-  const fechaFormateada = `${diasSemana[hoy.getDay()]} ${hoy.getDate()} de ${meses[hoy.getMonth()]}`;
+  const [expanded, setExpanded] = useState(false);
+  if (cargando) {
+    return (
+      <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "15px", padding: "60px 20px" }}>
+        <RefreshCw size={40} style={{ color: "var(--color-accent)", animation: "spin 2s linear infinite" }} />
+        <span style={{ fontFamily: "var(--font-ui)", fontSize: "1.1rem", color: "var(--color-text-light)" }}>Preparando la liturgia de hoy...</span>
+      </div>
+    );
+  }
 
   return (
-    <div
-      style={{
-        opacity: visible ? 1 : 0,
-        transform: visible ? "translateY(0)" : "translateY(12px)",
-        transition: "opacity 0.6s ease, transform 0.6s ease",
-        margin: "2.5rem 0",
-        borderRadius: "16px",
-        overflow: "hidden",
-        boxShadow: "0 10px 30px rgba(0,0,0,0.08)",
-        border: "1px solid var(--color-border)",
-        background: "white",
-      }}
-    >
-      {/* Header / Trigger */}
-      <div
-        onClick={toggleExpand}
-        style={{
-          background: "linear-gradient(135deg, var(--color-accent) 0%, #8b0000 100%)",
-          padding: "1.2rem 2rem",
+    <div style={{ 
+      display: "flex", 
+      flexDirection: "column", 
+      gap: "2.5rem", 
+      margin: "3rem 0",
+      opacity: visible ? 1 : 0,
+      transform: visible ? "translateY(0)" : "translateY(20px)",
+      transition: "all 0.8s ease-out"
+    }}>
+      
+      {/* 1. SECCIÓN: SANTO DEL DÍA (Independiente) */}
+      {data.santo && (
+        <div style={{
+          background: "white",
+          borderRadius: "16px",
+          padding: "2rem",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+          border: "1px solid var(--color-border)",
           display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-          cursor: "pointer",
-          userSelect: "none"
+          flexDirection: window.innerWidth < 768 ? "column" : "row",
+          gap: "2rem",
+          alignItems: "center"
+        }}>
+          {data.santoImage && (
+            <div style={{ 
+              width: "180px", 
+              height: "180px", 
+              borderRadius: "50%", 
+              overflow: "hidden", 
+              boxShadow: "0 8px 25px rgba(0,0,0,0.1)", 
+              flexShrink: 0,
+              border: "4px solid white"
+            }}>
+              <img src={data.santoImage} alt={data.santo} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            </div>
+          )}
+          <div style={{ flex: 1 }}>
+            <div style={{ display: "flex", alignItems: "center", gap: "10px", marginBottom: "1.5rem" }}>
+              <Sparkles size={20} style={{ color: "var(--color-accent)" }} />
+              <h3 style={{ margin: 0, fontFamily: "var(--font-heading)", fontSize: "1.4rem", color: "var(--color-dark)" }}>
+                Santo del día: {data.santo}
+              </h3>
+            </div>
+            {data.santoId && (
+              <Link 
+                to={`/santo-biografia/${data.santoId}`}
+                style={{ 
+                  display: "inline-flex", 
+                  alignItems: "center", 
+                  gap: "8px", 
+                  color: "var(--color-accent)", 
+                  textDecoration: "none", 
+                  fontWeight: "700",
+                  fontSize: "1rem",
+                  borderBottom: "2px solid var(--color-accent)",
+                  paddingBottom: "2px",
+                  transition: "all 0.2s ease"
+                }}
+                onMouseOver={(e) => e.currentTarget.style.opacity = "0.7"}
+                onMouseOut={(e) => e.currentTarget.style.opacity = "1"}
+              >
+                Ver biografía completa <ChevronRight size={18} />
+              </Link>
+            )}
+          </div>
+        </div>
+      )}
+
+      {/* 2. SECCIÓN: SALMO DEL DÍA (Independiente) */}
+      {data.salmo && (
+        <div style={{
+          background: "rgba(181, 152, 90, 0.03)",
+          borderRadius: "16px",
+          padding: "2.5rem",
+          border: "1px dashed var(--color-accent)",
+          position: "relative"
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1.5rem" }}>
+            <div style={{ background: "white", padding: "10px", borderRadius: "12px", boxShadow: "0 4px 10px rgba(0,0,0,0.05)" }}>
+              <Music size={24} style={{ color: "var(--color-accent)" }} />
+            </div>
+            <div>
+              <h3 style={{ margin: 0, fontFamily: "var(--font-heading)", fontSize: "1.3rem", color: "var(--color-dark)" }}>Salmo Responsorial</h3>
+              <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", fontWeight: "700" }}>{data.salmoRef}</span>
+            </div>
+          </div>
+          <p style={{ 
+            fontSize: "1.2rem", 
+            lineHeight: "1.8", 
+            color: "var(--color-text)", 
+            fontStyle: "italic", 
+            margin: 0, 
+            fontFamily: "var(--font-body)",
+            maxWidth: "900px" 
+          }}>
+            {data.salmo}
+          </p>
+        </div>
+      )}
+
+      {/* 3. SECCIÓN: EVANGELIO DEL DÍA (DISEÑO ORIGINAL RESTAURADO) */}
+      <div 
+        style={{
+          borderRadius: "16px",
+          overflow: "hidden",
+          boxShadow: "0 10px 30px rgba(139, 0, 0, 0.15)",
+          border: "1px solid var(--color-border)",
+          background: "white",
         }}
       >
-        <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <div style={{ background: "rgba(255,255,255,0.2)", padding: "8px", borderRadius: "10px" }}>
-            <BookOpen size={22} style={{ color: "white" }} />
+        {/* Header exacto como el original */}
+        <div
+          onClick={() => setExpandedGsp(!expandedGsp)}
+          style={{
+            background: "linear-gradient(135deg, var(--color-accent) 0%, #8b0000 100%)",
+            padding: "1.5rem 2.5rem",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between",
+            cursor: "pointer",
+            userSelect: "none"
+          }}
+        >
+          <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
+            <div style={{ background: "rgba(255,255,255,0.2)", padding: "10px", borderRadius: "12px" }}>
+              <BookOpen size={26} style={{ color: "white" }} />
+            </div>
+            <div>
+              <span style={{ color: "white", fontFamily: "var(--font-heading)", fontWeight: "800", fontSize: "1.30rem", display: "block", letterSpacing: "0.02em" }}>
+                Evangelio del Día: {data.ref}
+              </span>
+            </div>
           </div>
-          <div>
-            <span style={{ color: "white", fontFamily: "var(--font-heading)", fontWeight: "800", fontSize: "1.1rem", display: "block", letterSpacing: "0.02em" }}>
-              Evangelio del día: {data.ref || "Cargando..."}
-            </span>
-            <span style={{ color: "rgba(255,255,255,0.7)", fontSize: "0.75rem", fontFamily: "var(--font-ui)", textTransform: "uppercase" }}>
-              Reina Valera 1960
-            </span>
+          <div style={{ color: "white", background: "rgba(255,255,255,0.2)", borderRadius: "50%", padding: "8px", display: "flex" }}>
+            {expandedGsp ? <ChevronUp size={28} /> : <ChevronDown size={28} />}
           </div>
         </div>
-        <div style={{ display: "flex", alignItems: "center", gap: "15px" }}>
-          <div style={{ color: "white", background: "rgba(255,255,255,0.2)", borderRadius: "50%", padding: "5px", display: "flex" }}>
-            {expanded ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
-          </div>
-        </div>
-      </div>
 
-      {/* Contenido Colapsable */}
-      <div 
-        style={{ 
-          maxHeight: expanded ? "2000px" : "0px",
+        {/* Contenido colapsable exacto */}
+        <div style={{ 
+          maxHeight: expandedGsp ? "1500px" : "0px",
           transition: "max-height 0.8s cubic-bezier(0, 1, 0, 1)",
           overflow: "hidden",
           background: "white"
-        }}
-      >
-        <div style={{ padding: "2.2rem 2.5rem" }}>
-          {cargando ? (
-            <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "15px", padding: "40px 0" }}>
-              <RefreshCw size={30} style={{ color: "var(--color-accent)", animation: "spin 2s linear infinite" }} />
-              <span style={{ fontFamily: "var(--font-ui)", fontSize: "1rem", color: "var(--color-text-light)" }}>Consultando el leccionario de hoy...</span>
-            </div>
-          ) : error ? (
-            <div style={{ textAlign: "center", padding: "20px" }}>
-              <p style={{ color: "var(--color-text-light)", fontStyle: "italic", fontFamily: "var(--font-body)" }}>
-                No se pudo sincronizar el evangelio. Por favor intente más tarde.
+        }}>
+          <div style={{ padding: "3rem 3.5rem" }}>
+            <div style={{ position: "relative" }}>
+               <span style={{ position: "absolute", left: "-25px", top: "-20px", fontSize: "6rem", color: "rgba(181, 152, 90, 0.1)", fontFamily: "serif", lineHeight: "1" }}>“</span>
+               <p style={{
+                  fontSize: "1.4rem",
+                  lineHeight: "2",
+                  fontFamily: "var(--font-body)",
+                  color: "var(--color-text)",
+                  fontStyle: "italic",
+                  margin: "0 0 3rem 0"
+                }}>
+                {data.texto}
               </p>
             </div>
-          ) : (
-            <>
-              <div style={{ position: "relative" }}>
-                 <span style={{ position: "absolute", left: "-15px", top: "-10px", fontSize: "4rem", color: "rgba(181, 152, 90, 0.1)", fontFamily: "serif", lineHeight: "1" }}>“</span>
-                 <p
+
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem", borderTop: "1px solid rgba(0,0,0,0.08)", paddingTop: "2rem" }}>
+              <span style={{ fontFamily: "var(--font-heading)", fontWeight: "800", color: "var(--color-accent)", fontSize: "1.8rem" }}>
+                {data.ref}
+              </span>
+              {data.refParsed && (
+                <Link
+                  to={`/${NOMBRES_EVANGELIO[data.refParsed.book].toLowerCase()}/capitulos/${data.refParsed.chapter}`}
                   style={{
-                    fontSize: "1.25rem",
-                    lineHeight: "1.8",
-                    fontFamily: "var(--font-body)",
-                    color: "var(--color-text)",
-                    fontStyle: "italic",
-                    margin: "0 0 2rem 0",
-                    paddingLeft: "10px"
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    background: "var(--color-accent)",
+                    color: "white",
+                    fontFamily: "var(--font-ui)",
+                    padding: "14px 30px",
+                    borderRadius: "40px",
+                    textDecoration: "none",
+                    fontWeight: "800",
+                    fontSize: "1rem",
+                    boxShadow: "0 6px 20px rgba(181, 152, 90, 0.4)",
+                    transition: "all 0.3s ease"
+                  }}
+                  onMouseOver={(e) => {
+                    e.currentTarget.style.transform = "translateY(-3px)";
+                    e.currentTarget.style.boxShadow = "0 10px 25px rgba(181, 152, 90, 0.5)";
+                  }}
+                  onMouseOut={(e) => {
+                    e.currentTarget.style.transform = "translateY(0)";
+                    e.currentTarget.style.boxShadow = "0 6px 20px rgba(181, 152, 90, 0.4)";
                   }}
                 >
-                  {data.texto}
-                </p>
-              </div>
-              
-              <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: "1.5rem", borderTop: "1px solid rgba(0,0,0,0.05)", paddingTop: "1.5rem" }}>
-                <div style={{ display: "flex", flexDirection: "column" }}>
-                  <span style={{ fontFamily: "var(--font-heading)", fontWeight: "800", color: "var(--color-accent)", fontSize: "1.3rem" }}>
-                    {data.ref}
-                  </span>
-                </div>
-                
-                {data.refParsed && (
-                  <Link
-                    to={`/${NOMBRES_EVANGELIO[data.refParsed.book].toLowerCase()}/capitulos/${data.refParsed.chapter}`}
-                    className="btn-hover-effect"
-                    style={{
-                      display: "inline-flex",
-                      alignItems: "center",
-                      gap: "8px",
-                      background: "var(--color-accent)",
-                      color: "white",
-                      fontFamily: "var(--font-ui)",
-                      fontSize: "0.95rem",
-                      fontWeight: "600",
-                      textDecoration: "none",
-                      padding: "12px 24px",
-                      borderRadius: "30px",
-                      transition: "all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275)",
-                      boxShadow: "0 4px 15px rgba(181, 152, 90, 0.3)"
-                    }}
-                  >
-                    Leer Capítulo Completo <ChevronRight size={18} />
-                  </Link>
-                )}
-              </div>
-            </>
-          )}
+                  Continuar Estudiando <ChevronRight size={22} />
+                </Link>
+              )}
+            </div>
+          </div>
         </div>
+        
+        {!expandedGsp && (
+          <div style={{ padding: "1.5rem", textAlign: "center", background: "rgba(0,0,0,0.02)", color: "var(--color-dark)", fontWeight: "600", fontSize: "0.95rem" }}>
+            Haz clic para abrir el Evangelio de hoy: {data.ref}
+          </div>
+        )}
       </div>
 
       <style>{`
         @keyframes spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        .btn-hover-effect:hover { 
-          transform: translateY(-3px) scale(1.02);
-          box-shadow: 0 8px 25px rgba(181, 152, 90, 0.4);
-        }
       `}</style>
     </div>
   );

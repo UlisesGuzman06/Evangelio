@@ -46,6 +46,7 @@ import { PasajesLucas } from "./pages/lucas/PasajesLucas";
 import { TeologiaLucas } from "./pages/lucas/TeologiaLucas";
 import { HistoriaLucas } from "./pages/lucas/HistoriaLucas";
 import { ConclusionLucas } from "./pages/lucas/ConclusionLucas";
+import { SantoBiografia } from "./pages/SantoBiografia";
 
 function App() {
   return (
@@ -128,6 +129,8 @@ function App() {
           <Route path="historia" element={<HistoriaJuan />} />
           <Route path="conclusion" element={<ConclusionJuan />} />
         </Route>
+
+        <Route path="/santo-biografia/:id" element={<SantoBiografia />} />
 
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
