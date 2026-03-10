@@ -85,10 +85,12 @@ export function EvangelioDelDia() {
     refParsed: null,
     santo: "",
     santoBio: "",
+    santoResumen: "",
     santoId: "",
     salmo: "",
     salmoRef: "",
-    santoImage: "/santo_del_dia.png" // Imagen del santo del día
+    lecturas: [], // Array para Primera y Segunda lectura
+    santoImage: "/santo_del_dia.png",
   });
   const [cargando, setCargando] = useState(true);
   const [error, setError] = useState(false);
@@ -210,6 +212,29 @@ export function EvangelioDelDia() {
           salmoRef = limpiarReferenciaSalmo(rawPSLRef);
         } catch (e) {}
 
+        // Lecturas del Día (FR, SR)
+        const lecturasFinales = [];
+        const readingTypes = ["FR", "SR"];
+        for (const type of readingTypes) {
+          try {
+            const resRef = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=reading_st&content=${type}`);
+            const rawRef = await resRef.text();
+            
+            // Si la respuesta contiene "Error" o es el manual de ayuda, no es una lectura válida
+            if (rawRef && !rawRef.includes("Error") && !rawRef.includes("SYNOPSIS") && rawRef.trim().length > 0) {
+              const resText = await fetch(`${EVANGELIZO_URL}?date=${hoy}&lang=SP&type=reading&content=${type}`);
+              const rawText = await resText.text();
+              
+              if (rawText && !rawText.includes("Error")) {
+                lecturasFinales.push({
+                  ref: rawRef.replace(/<[^>]*>/g, "").trim(),
+                  texto: limpiarTexto(rawText)
+                });
+              }
+            }
+          } catch (e) {}
+        }
+
         setData(prev => ({
           ...prev,
           texto: textoFinal,
@@ -221,7 +246,8 @@ export function EvangelioDelDia() {
           santoId: currentSantoId,
           santoImage: santoImg || "/santo_del_dia.png",
           salmo: salmoTexto,
-          salmoRef: salmoRef
+          salmoRef: salmoRef,
+          lecturas: lecturasFinales
         }));
       } catch (err) {
         console.error(err);
@@ -313,7 +339,41 @@ export function EvangelioDelDia() {
         </div>
       )}
 
-      {/* 2. SECCIÓN: SALMO DEL DÍA (Independiente) */}
+      {/* 2. SECCIÓN: LECTURAS DEL DÍA */}
+      {data.lecturas.map((lectura, index) => (
+        <div key={index} style={{
+          background: "white",
+          borderRadius: "16px",
+          padding: "2.5rem",
+          boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
+          border: "1px solid var(--color-border)",
+          position: "relative"
+        }}>
+          <div style={{ display: "flex", alignItems: "center", gap: "12px", marginBottom: "1.5rem" }}>
+            <div style={{ background: "rgba(0,0,0,0.03)", padding: "10px", borderRadius: "12px" }}>
+              <BookOpen size={24} style={{ color: "var(--color-dark)" }} />
+            </div>
+            <div>
+              <h3 style={{ margin: 0, fontFamily: "var(--font-heading)", fontSize: "1.3rem", color: "var(--color-dark)" }}>
+                {index === 0 ? "Primera Lectura" : "Segunda Lectura"}
+              </h3>
+              <span style={{ fontSize: "0.85rem", color: "var(--color-accent)", fontWeight: "700" }}>{lectura.ref}</span>
+            </div>
+          </div>
+          <p style={{ 
+            fontSize: "1.15rem", 
+            lineHeight: "1.8", 
+            color: "var(--color-text)", 
+            margin: 0, 
+            fontFamily: "var(--font-body)",
+            maxWidth: "900px" 
+          }}>
+            {lectura.texto}
+          </p>
+        </div>
+      ))}
+
+      {/* 3. SECCIÓN: SALMO DEL DÍA (Independiente) */}
       {data.salmo && (
         <div style={{
           background: "rgba(181, 152, 90, 0.03)",
@@ -345,7 +405,7 @@ export function EvangelioDelDia() {
         </div>
       )}
 
-      {/* 3. SECCIÓN: EVANGELIO DEL DÍA (DISEÑO ORIGINAL RESTAURADO) */}
+      {/* 4. SECCIÓN: EVANGELIO DEL DÍA (DISEÑO ORIGINAL RESTAURADO) */}
       <div 
         style={{
           borderRadius: "16px",
@@ -443,6 +503,7 @@ export function EvangelioDelDia() {
           </div>
         </div>
         
+        {/* Barra inferior que dice "Haz clic para abrir" */}
         {!expandedGsp && (
           <div style={{ padding: "1.5rem", textAlign: "center", background: "rgba(0,0,0,0.02)", color: "var(--color-dark)", fontWeight: "600", fontSize: "0.95rem" }}>
             Haz clic para abrir el Evangelio de hoy: {data.ref}
