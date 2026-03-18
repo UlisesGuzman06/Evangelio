@@ -51,7 +51,7 @@ const navItems = [
 
 export function LayoutMateo({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -99,7 +99,7 @@ export function LayoutMateo({ children }) {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`nav-item ${location.pathname === item.path || (item.path === "/mateo/capitulos" && location.pathname.startsWith("/mateo/capitulos")) ? "active" : ""}`}
+                className={`nav-item ${pathname === item.path || (item.path === "/mateo/capitulos" && pathname.startsWith("/mateo/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >
                 <span className="nav-icon">{item.icon}</span>

@@ -51,7 +51,7 @@ const navItems = [
 
 export function LayoutLucas({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -99,7 +99,7 @@ export function LayoutLucas({ children }) {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`nav-item ${location.pathname === item.path || (item.path === "/lucas/capitulos" && location.pathname.startsWith("/lucas/capitulos")) ? "active" : ""}`}
+                className={`nav-item ${pathname === item.path || (item.path === "/lucas/capitulos" && pathname.startsWith("/lucas/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >
                 <span className="nav-icon">{item.icon}</span>

@@ -47,7 +47,7 @@ const navItems = [
 
 export function LayoutJuan({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -95,7 +95,7 @@ export function LayoutJuan({ children }) {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`nav-item ${location.pathname === item.path || (item.path === "/juan/capitulos" && location.pathname.startsWith("/juan/capitulos")) ? "active" : ""}`}
+                className={`nav-item ${pathname === item.path || (item.path === "/juan/capitulos" && pathname.startsWith("/juan/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >
                 <span className="nav-icon">{item.icon}</span>

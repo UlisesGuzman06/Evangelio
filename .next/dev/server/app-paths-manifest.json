@@ -1,3 +1,5 @@
 {
-  "/page": "app/page.js"
+  "/hechos/page": "app/hechos/page.js",
+  "/page": "app/page.js",
+  "/santo-biografia/[id]/page": "app/santo-biografia/[id]/page.js"
 }

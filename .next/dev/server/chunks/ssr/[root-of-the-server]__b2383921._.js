@@ -526,6 +526,96 @@ function Home() {
                                     fileName: "[project]/src/views/Home.jsx",
                                     lineNumber: 235,
                                     columnNumber: 13
+                                }, this),
+                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$react$2d$server$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["default"], {
+                                    href: "/hechos",
+                                    className: "card highlight-card border-accent",
+                                    style: {
+                                        display: "flex",
+                                        flexDirection: "column",
+                                        textDecoration: "none"
+                                    },
+                                    children: [
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                display: "flex",
+                                                alignItems: "center",
+                                                marginBottom: "1rem"
+                                            },
+                                            children: [
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__$3c$export__default__as__Book$3e$__["Book"], {
+                                                    size: 24,
+                                                    style: {
+                                                        color: "var(--color-accent)",
+                                                        marginRight: "10px"
+                                                    }
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/views/Home.jsx",
+                                                    lineNumber: 314,
+                                                    columnNumber: 17
+                                                }, this),
+                                                /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("h2", {
+                                                    style: {
+                                                        fontSize: "1.5rem",
+                                                        margin: 0,
+                                                        color: "var(--color-accent)",
+                                                        borderBottom: "none",
+                                                        paddingBottom: 0
+                                                    },
+                                                    children: "Hechos de los Apóstoles"
+                                                }, void 0, false, {
+                                                    fileName: "[project]/src/views/Home.jsx",
+                                                    lineNumber: 318,
+                                                    columnNumber: 17
+                                                }, this)
+                                            ]
+                                        }, void 0, true, {
+                                            fileName: "[project]/src/views/Home.jsx",
+                                            lineNumber: 307,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                            style: {
+                                                color: "var(--color-text)",
+                                                marginBottom: "0",
+                                                flexGrow: 1
+                                            },
+                                            children: "El inicio de la Iglesia primitiva bajo el poder del Espíritu Santo, conectando los Evangelios con las Epístolas."
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/views/Home.jsx",
+                                            lineNumber: 330,
+                                            columnNumber: 15
+                                        }, this),
+                                        /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
+                                            style: {
+                                                marginTop: "auto",
+                                                paddingTop: "1rem",
+                                                display: "flex",
+                                                justifyContent: "flex-end"
+                                            },
+                                            children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$rsc$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$rsc$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
+                                                style: {
+                                                    color: "var(--color-accent)",
+                                                    fontWeight: "600",
+                                                    fontFamily: "var(--font-ui)",
+                                                    fontSize: "0.95rem"
+                                                },
+                                                children: "Leer ahora →"
+                                            }, void 0, false, {
+                                                fileName: "[project]/src/views/Home.jsx",
+                                                lineNumber: 347,
+                                                columnNumber: 17
+                                            }, this)
+                                        }, void 0, false, {
+                                            fileName: "[project]/src/views/Home.jsx",
+                                            lineNumber: 339,
+                                            columnNumber: 15
+                                        }, this)
+                                    ]
+                                }, void 0, true, {
+                                    fileName: "[project]/src/views/Home.jsx",
+                                    lineNumber: 298,
+                                    columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
@@ -559,17 +649,17 @@ function Home() {
                         children: "Un estudio profundo sobre La Santa Biblia."
                     }, void 0, false, {
                         fileName: "[project]/src/views/Home.jsx",
-                        lineNumber: 304,
+                        lineNumber: 366,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/views/Home.jsx",
-                    lineNumber: 303,
+                    lineNumber: 365,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/views/Home.jsx",
-                lineNumber: 302,
+                lineNumber: 364,
                 columnNumber: 7
             }, this)
         ]

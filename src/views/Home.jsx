@@ -294,6 +294,68 @@ export function Home() {
                 </span>
               </div>
             </Link>
+
+            <Link
+              href="/hechos"
+              className="card highlight-card border-accent"
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                textDecoration: "none",
+              }}
+            >
+              <div
+                style={{
+                  display: "flex",
+                  alignItems: "center",
+                  marginBottom: "1rem",
+                }}
+              >
+                <Book
+                  size={24}
+                  style={{ color: "var(--color-accent)", marginRight: "10px" }}
+                />
+                <h2
+                  style={{
+                    fontSize: "1.5rem",
+                    margin: 0,
+                    color: "var(--color-accent)",
+                    borderBottom: "none",
+                    paddingBottom: 0,
+                  }}
+                >
+                  Hechos de los Apóstoles
+                </h2>
+              </div>
+              <p
+                style={{
+                  color: "var(--color-text)",
+                  marginBottom: "0",
+                  flexGrow: 1,
+                }}
+              >
+                El inicio de la Iglesia primitiva bajo el poder del Espíritu Santo, conectando los Evangelios con las Epístolas.
+              </p>
+              <div
+                style={{
+                  marginTop: "auto",
+                  paddingTop: "1rem",
+                  display: "flex",
+                  justifyContent: "flex-end",
+                }}
+              >
+                <span
+                  style={{
+                    color: "var(--color-accent)",
+                    fontWeight: "600",
+                    fontFamily: "var(--font-ui)",
+                    fontSize: "0.95rem",
+                  }}
+                >
+                  Leer ahora →
+                </span>
+              </div>
+            </Link>
           </div>
         </div>
       </main>

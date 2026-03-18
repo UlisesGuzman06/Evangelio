@@ -51,7 +51,7 @@ const navItems = [
 
 export function LayoutMarcos({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const location = useLocation();
+  const pathname = usePathname();
 
   const toggleSidebar = () => setSidebarOpen(!sidebarOpen);
 
@@ -99,7 +99,7 @@ export function LayoutMarcos({ children }) {
               <Link
                 key={item.path}
                 href={item.path}
-                className={`nav-item ${location.pathname === item.path || (item.path === "/marcos/capitulos" && location.pathname.startsWith("/marcos/capitulos")) ? "active" : ""}`}
+                className={`nav-item ${pathname === item.path || (item.path === "/marcos/capitulos" && pathname.startsWith("/marcos/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >
                 <span className="nav-icon">{item.icon}</span>
