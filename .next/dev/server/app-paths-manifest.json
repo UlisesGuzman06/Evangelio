@@ -1,4 +1,12 @@
 {
+  "/diccionario/page": "app/diccionario/page.js",
   "/hechos/capitulos/[id]/page": "app/hechos/capitulos/[id]/page.js",
-  "/hechos/capitulos/page": "app/hechos/capitulos/page.js"
+  "/hechos/capitulos/page": "app/hechos/capitulos/page.js",
+  "/hechos/page": "app/hechos/page.js",
+  "/lucas/page": "app/lucas/page.js",
+  "/mateo/capitulos/[id]/page": "app/mateo/capitulos/[id]/page.js",
+  "/mateo/capitulos/page": "app/mateo/capitulos/page.js",
+  "/mateo/page": "app/mateo/page.js",
+  "/mateo/temas/page": "app/mateo/temas/page.js",
+  "/page": "app/page.js"
 }

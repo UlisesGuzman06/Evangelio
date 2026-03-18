@@ -19,7 +19,8 @@ export function Home() {
         top: 0,
         zIndex: 50,
       }}>
-        <div className="container" style={{ textAlign: "center" }}>
+        <div className="container" style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+          <div style={{ width: "100px" }} className="hide-mobile-text"></div>
           <Link href="/" style={{ textDecoration: "none", color: "inherit", cursor: "default" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
               <Library size={22} style={{ color: "var(--color-accent)" }} />
@@ -31,6 +32,10 @@ export function Home() {
                 letterSpacing: "0.02em",
               }}>La Santa Biblia</span>
             </div>
+          </Link>
+          <Link href="/diccionario" style={{ textDecoration: "none", color: "var(--color-accent)", fontWeight: "600", display: "flex", alignItems: "center", gap: "0.5rem" }}>
+            <Book size={18} />
+            <span className="hide-mobile-text">Diccionario</span>
           </Link>
         </div>
       </header>

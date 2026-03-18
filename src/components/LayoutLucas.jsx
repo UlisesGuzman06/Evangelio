@@ -72,6 +72,10 @@ export function LayoutLucas({ children }) {
               <h1>El Evangelio de Lucas</h1>
             </Link>
           </div>
+          <Link href="/diccionario" style={{ display: "flex", alignItems: "center", gap: "0.5rem", textDecoration: "none", color: "var(--color-accent)", fontWeight: "600" }}>
+            <BookOpen size={20} />
+            <span className="hide-mobile-text">Diccionario</span>
+          </Link>
         </div>
       </header>
 

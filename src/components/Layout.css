@@ -19,10 +19,36 @@
   height: 70px;
 }
 
+.logo {
+  flex-grow: 1;
+}
+
+.logo a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.hide-mobile-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile-text {
+    display: inline;
+  }
+}
+
+
 .logo h1 {
   font-size: 1.5rem;
   margin-left: 1rem;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 1.2rem;
+  }
 }
 
 .menu-btn {

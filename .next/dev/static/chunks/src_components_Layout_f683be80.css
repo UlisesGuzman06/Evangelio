@@ -19,10 +19,35 @@
   display: flex;
 }
 
+.logo {
+  flex-grow: 1;
+}
+
+.logo a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hide-mobile-text {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .hide-mobile-text {
+    display: inline;
+  }
+}
+
 .logo h1 {
   margin-left: 1rem;
   font-size: 1.5rem;
   font-weight: 700;
+}
+
+@media (max-width: 600px) {
+  .logo h1 {
+    font-size: 1.2rem;
+  }
 }
 
 .menu-btn {
