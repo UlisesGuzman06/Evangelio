@@ -1,0 +1,148 @@
+/* [project]/src/views/pages.css [app-client] (css) */
+.page-container {
+  max-width: 900px;
+  margin: 0 auto;
+  animation: .6s ease-out forwards fadeIn;
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.title-large {
+  color: var(--color-dark);
+  margin-bottom: .5rem;
+  font-size: 2.5rem;
+}
+
+.subtitle {
+  color: var(--color-text-light);
+  font-size: 1.2rem;
+  font-style: italic;
+  font-family: var(--font-body);
+}
+
+.content-section {
+  margin-bottom: 3rem;
+}
+
+.content-section h2 {
+  color: var(--color-accent);
+  border-bottom: 2px solid var(--color-bg-alt);
+  margin-bottom: 1.2rem;
+  padding-bottom: .5rem;
+  font-size: 1.8rem;
+}
+
+.content-section p {
+  margin-bottom: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.card {
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--color-border);
+  transition: var(--transition);
+  background: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.grid-2 {
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.highlight-card {
+  border-top-width: 4px;
+}
+
+.border-accent {
+  border-top-color: var(--color-accent);
+}
+
+.border-dark {
+  border-top-color: var(--color-dark);
+}
+
+.bg-accent-light {
+  background-color: var(--color-bg-alt);
+  border-color: var(--color-bg-alt);
+}
+
+.bg-accent-light h2 {
+  color: var(--color-dark);
+  border-bottom-color: var(--color-border);
+}
+
+.custom-list {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.custom-list li {
+  margin-bottom: 1rem;
+  padding-left: 1.5rem;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  position: relative;
+}
+
+.custom-list li:before {
+  content: "•";
+  color: var(--color-accent);
+  font-size: 1.5rem;
+  position: absolute;
+  top: -4px;
+  left: 0;
+}
+
+.features-grid {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+  margin-top: 2rem;
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.feature-item {
+  border-top: 3px solid var(--color-accent);
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+  border-radius: 6px;
+  padding: 1.5rem;
+}
+
+.feature-item h3 {
+  color: var(--color-accent);
+  margin-bottom: .8rem;
+  font-size: 1.2rem;
+}
+
+.feature-item p {
+  color: var(--color-text-light);
+  margin-bottom: 0;
+  font-size: 1rem;
+}
+
+/*# sourceMappingURL=src_views_pages_938a93d0.css.map*/

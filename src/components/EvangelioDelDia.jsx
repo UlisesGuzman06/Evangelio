@@ -1,10 +1,11 @@
+"use client";
 import React, { useState, useEffect } from "react";
 import { BookOpen, ChevronRight, RefreshCw, ChevronDown, ChevronUp, Sparkles, Music } from "lucide-react";
-import { Link } from "react-router-dom";
+import Link from 'next/link';
 
 // Configuración de APIs
 const BIBLE_ID = "592420522e16049f-01"; // RVR1960
-const API_KEY = import.meta.env.VITE_BIBLE_API_KEY;
+const API_KEY = process.env.NEXT_PUBLIC_BIBLE_API_KEY;
 const API_BIBLE_URL = "https://rest.api.bible/v1";
 const EVANGELIZO_URL = "https://feed.evangelizo.org/v2/reader.php";
 
@@ -316,7 +317,7 @@ export function EvangelioDelDia() {
             </div>
             {data.santoId && (
               <Link 
-                to={`/santo-biografia/${data.santoId}`}
+                href={`/santo-biografia/${data.santoId}`}
                 style={{ 
                   display: "inline-flex", 
                   alignItems: "center", 
@@ -471,7 +472,7 @@ export function EvangelioDelDia() {
               </span>
               {data.refParsed && (
                 <Link
-                  to={`/${NOMBRES_EVANGELIO[data.refParsed.book].toLowerCase()}/capitulos/${data.refParsed.chapter}`}
+                  href={`/${NOMBRES_EVANGELIO[data.refParsed.book].toLowerCase()}/capitulos/${data.refParsed.chapter}`}
                   style={{
                     display: "inline-flex",
                     alignItems: "center",

@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import {
   Menu,
@@ -9,7 +10,8 @@ import {
   Sunrise,
   ArrowLeft,
 } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import "./Layout.css";
 
 const navItems = [
@@ -62,7 +64,7 @@ export function LayoutJuan({ children }) {
             {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <div className="logo">
-            <Link to="/juan">
+            <Link href="/juan">
               <h1>El Evangelio de Juan</h1>
             </Link>
           </div>
@@ -74,7 +76,7 @@ export function LayoutJuan({ children }) {
         <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
           <nav className="sidebar-nav">
             <Link
-              to="/"
+              href="/"
               className="nav-item"
               style={{
                 borderBottom: "1px solid var(--color-border)",
@@ -92,7 +94,7 @@ export function LayoutJuan({ children }) {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
+                href={item.path}
                 className={`nav-item ${location.pathname === item.path || (item.path === "/juan/capitulos" && location.pathname.startsWith("/juan/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >

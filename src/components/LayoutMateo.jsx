@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from "react";
 import {
   Menu,
@@ -9,7 +10,8 @@ import {
   Sunrise,
   ArrowLeft,
 } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { usePathname } from 'next/navigation';
+import Link from 'next/link';
 import "./Layout.css";
 
 const navItems = [
@@ -66,7 +68,7 @@ export function LayoutMateo({ children }) {
             {sidebarOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
           <div className="logo">
-            <Link to="/mateo">
+            <Link href="/mateo">
               <h1>El Evangelio de Mateo</h1>
             </Link>
           </div>
@@ -78,7 +80,7 @@ export function LayoutMateo({ children }) {
         <aside className={`sidebar ${sidebarOpen ? "open" : ""}`}>
           <nav className="sidebar-nav">
             <Link
-              to="/"
+              href="/"
               className="nav-item"
               style={{
                 borderBottom: "1px solid var(--color-border)",
@@ -96,7 +98,7 @@ export function LayoutMateo({ children }) {
             {navItems.map((item) => (
               <Link
                 key={item.path}
-                to={item.path}
+                href={item.path}
                 className={`nav-item ${location.pathname === item.path || (item.path === "/mateo/capitulos" && location.pathname.startsWith("/mateo/capitulos")) ? "active" : ""}`}
                 onClick={() => setSidebarOpen(false)}
               >
