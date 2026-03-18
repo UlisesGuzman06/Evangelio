@@ -1,7 +1,18 @@
 {
   "/hechos/capitulos/[id]/page": "app/hechos/capitulos/[id]/page.js",
   "/hechos/capitulos/page": "app/hechos/capitulos/page.js",
+  "/hechos/estructura/page": "app/hechos/estructura/page.js",
+  "/hechos/historia/page": "app/hechos/historia/page.js",
   "/hechos/page": "app/hechos/page.js",
+  "/hechos/pasajes/page": "app/hechos/pasajes/page.js",
+  "/hechos/temas/page": "app/hechos/temas/page.js",
+  "/hechos/teologia/page": "app/hechos/teologia/page.js",
+  "/mateo/capitulos/page": "app/mateo/capitulos/page.js",
+  "/mateo/estructura/page": "app/mateo/estructura/page.js",
+  "/mateo/historia/page": "app/mateo/historia/page.js",
   "/mateo/page": "app/mateo/page.js",
+  "/mateo/pasajes/page": "app/mateo/pasajes/page.js",
+  "/mateo/temas/page": "app/mateo/temas/page.js",
+  "/mateo/teologia/page": "app/mateo/teologia/page.js",
   "/page": "app/page.js"
 }
