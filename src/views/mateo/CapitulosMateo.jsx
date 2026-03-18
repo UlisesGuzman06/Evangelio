@@ -286,11 +286,3 @@ export function CapituloDetalle() {
   );
 }
 
-export function CapitulosMateo() {
-  return (
-    <Routes>
-      <Route path="/" element={<CapituloMenu />} />
-      <Route path="/:id" element={<CapituloDetalle />} />
-    </Routes>
-  );
-}
