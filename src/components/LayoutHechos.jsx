@@ -6,8 +6,14 @@ import Link from "next/link";
 import "./Layout.css";
 
 const navItems = [
-  { path: "/hechos", label: "Introducción a Hechos", icon: <Info size={20} /> },
+  { path: "/hechos", label: "Introducción", icon: <Info size={20} /> },
+  { path: "/hechos/estructura", label: "Estructura", icon: <BookOpen size={20} /> },
   { path: "/hechos/capitulos", label: "Capítulos", icon: <BookOpen size={20} /> },
+  { path: "/hechos/temas", label: "Temas Principales", icon: <BookOpen size={20} /> },
+  { path: "/hechos/pasajes", label: "Pasajes Clave", icon: <BookOpen size={20} /> },
+  { path: "/hechos/teologia", label: "Enfoque Teológico", icon: <Info size={20} /> },
+  { path: "/hechos/historia", label: "Contexto Histórico", icon: <BookOpen size={20} /> },
+  { path: "/hechos/conclusion", label: "Conclusión", icon: <Info size={20} /> }
 ];
 
 export function LayoutHechos({ children }) {

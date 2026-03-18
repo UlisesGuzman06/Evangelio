@@ -2,5 +2,6 @@
   "/hechos/capitulos/[id]/page": "app/hechos/capitulos/[id]/page.js",
   "/hechos/capitulos/page": "app/hechos/capitulos/page.js",
   "/hechos/page": "app/hechos/page.js",
+  "/mateo/page": "app/mateo/page.js",
   "/page": "app/page.js"
 }

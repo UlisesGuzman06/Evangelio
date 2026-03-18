@@ -26,12 +26,23 @@ var _s = __turbopack_context__.k.signature();
 const navItems = [
     {
         path: "/hechos",
-        label: "Introducción a Hechos",
+        label: "Introducción",
         icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$info$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Info$3e$__["Info"], {
             size: 20
         }, void 0, false, {
             fileName: "[project]/src/components/LayoutHechos.jsx",
             lineNumber: 9,
+            columnNumber: 51
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        path: "/hechos/estructura",
+        label: "Estructura",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
+            size: 20
+        }, void 0, false, {
+            fileName: "[project]/src/components/LayoutHechos.jsx",
+            lineNumber: 10,
             columnNumber: 60
         }, ("TURBOPACK compile-time value", void 0))
     },
@@ -42,8 +53,63 @@ const navItems = [
             size: 20
         }, void 0, false, {
             fileName: "[project]/src/components/LayoutHechos.jsx",
-            lineNumber: 10,
+            lineNumber: 11,
             columnNumber: 58
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        path: "/hechos/temas",
+        label: "Temas Principales",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
+            size: 20
+        }, void 0, false, {
+            fileName: "[project]/src/components/LayoutHechos.jsx",
+            lineNumber: 12,
+            columnNumber: 62
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        path: "/hechos/pasajes",
+        label: "Pasajes Clave",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
+            size: 20
+        }, void 0, false, {
+            fileName: "[project]/src/components/LayoutHechos.jsx",
+            lineNumber: 13,
+            columnNumber: 60
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        path: "/hechos/teologia",
+        label: "Enfoque Teológico",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$info$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Info$3e$__["Info"], {
+            size: 20
+        }, void 0, false, {
+            fileName: "[project]/src/components/LayoutHechos.jsx",
+            lineNumber: 14,
+            columnNumber: 65
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        path: "/hechos/historia",
+        label: "Contexto Histórico",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$book$2d$open$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__BookOpen$3e$__["BookOpen"], {
+            size: 20
+        }, void 0, false, {
+            fileName: "[project]/src/components/LayoutHechos.jsx",
+            lineNumber: 15,
+            columnNumber: 66
+        }, ("TURBOPACK compile-time value", void 0))
+    },
+    {
+        path: "/hechos/conclusion",
+        label: "Conclusión",
+        icon: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$info$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Info$3e$__["Info"], {
+            size: 20
+        }, void 0, false, {
+            fileName: "[project]/src/components/LayoutHechos.jsx",
+            lineNumber: 16,
+            columnNumber: 60
         }, ("TURBOPACK compile-time value", void 0))
     }
 ];
@@ -68,18 +134,18 @@ function LayoutHechos({ children }) {
                                 size: 24
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                                lineNumber: 24,
+                                lineNumber: 30,
                                 columnNumber: 28
                             }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$menu$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__Menu$3e$__["Menu"], {
                                 size: 24
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                                lineNumber: 24,
+                                lineNumber: 30,
                                 columnNumber: 46
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/LayoutHechos.jsx",
-                            lineNumber: 23,
+                            lineNumber: 29,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -90,28 +156,28 @@ function LayoutHechos({ children }) {
                                     children: "Hechos de los Apóstoles"
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/LayoutHechos.jsx",
-                                    lineNumber: 28,
+                                    lineNumber: 34,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                                lineNumber: 27,
+                                lineNumber: 33,
                                 columnNumber: 13
                             }, this)
                         }, void 0, false, {
                             fileName: "[project]/src/components/LayoutHechos.jsx",
-                            lineNumber: 26,
+                            lineNumber: 32,
                             columnNumber: 11
                         }, this)
                     ]
                 }, void 0, true, {
                     fileName: "[project]/src/components/LayoutHechos.jsx",
-                    lineNumber: 22,
+                    lineNumber: 28,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                lineNumber: 21,
+                lineNumber: 27,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -139,12 +205,12 @@ function LayoutHechos({ children }) {
                                                 size: 20
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                                                lineNumber: 43,
+                                                lineNumber: 49,
                                                 columnNumber: 42
                                             }, this)
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/LayoutHechos.jsx",
-                                            lineNumber: 43,
+                                            lineNumber: 49,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -152,13 +218,13 @@ function LayoutHechos({ children }) {
                                             children: "Volver a La Santa Biblia"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/LayoutHechos.jsx",
-                                            lineNumber: 44,
+                                            lineNumber: 50,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/LayoutHechos.jsx",
-                                    lineNumber: 37,
+                                    lineNumber: 43,
                                     columnNumber: 13
                                 }, this),
                                 navItems.map((item)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -171,7 +237,7 @@ function LayoutHechos({ children }) {
                                                 children: item.icon
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                                                lineNumber: 53,
+                                                lineNumber: 59,
                                                 columnNumber: 17
                                             }, this),
                                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -179,24 +245,24 @@ function LayoutHechos({ children }) {
                                                 children: item.label
                                             }, void 0, false, {
                                                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                                                lineNumber: 54,
+                                                lineNumber: 60,
                                                 columnNumber: 17
                                             }, this)
                                         ]
                                     }, item.path, true, {
                                         fileName: "[project]/src/components/LayoutHechos.jsx",
-                                        lineNumber: 47,
+                                        lineNumber: 53,
                                         columnNumber: 15
                                     }, this))
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/LayoutHechos.jsx",
-                            lineNumber: 36,
+                            lineNumber: 42,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/LayoutHechos.jsx",
-                        lineNumber: 35,
+                        lineNumber: 41,
                         columnNumber: 9
                     }, this),
                     sidebarOpen && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -204,7 +270,7 @@ function LayoutHechos({ children }) {
                         onClick: toggleSidebar
                     }, void 0, false, {
                         fileName: "[project]/src/components/LayoutHechos.jsx",
-                        lineNumber: 60,
+                        lineNumber: 66,
                         columnNumber: 25
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("main", {
@@ -212,13 +278,13 @@ function LayoutHechos({ children }) {
                         children: children
                     }, void 0, false, {
                         fileName: "[project]/src/components/LayoutHechos.jsx",
-                        lineNumber: 62,
+                        lineNumber: 68,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                lineNumber: 34,
+                lineNumber: 40,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -229,23 +295,23 @@ function LayoutHechos({ children }) {
                         children: "Un estudio profundo sobre los Hechos de los Apóstoles."
                     }, void 0, false, {
                         fileName: "[project]/src/components/LayoutHechos.jsx",
-                        lineNumber: 69,
+                        lineNumber: 75,
                         columnNumber: 11
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/src/components/LayoutHechos.jsx",
-                    lineNumber: 68,
+                    lineNumber: 74,
                     columnNumber: 9
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/src/components/LayoutHechos.jsx",
-                lineNumber: 67,
+                lineNumber: 73,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/src/components/LayoutHechos.jsx",
-        lineNumber: 20,
+        lineNumber: 26,
         columnNumber: 5
     }, this);
 }
