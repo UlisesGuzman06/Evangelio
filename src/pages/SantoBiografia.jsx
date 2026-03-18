@@ -46,14 +46,24 @@ export function SantoBiografia() {
           }
         }
 
-        // Extraer nombre del título si es posible
-        const nameMatch = cleanedBio.match(/([^.]+)/);
-        if (nameMatch) santoNombre = decodeHtml(nameMatch[0]);
+        const h3Match = htmlBio.match(/<h3[^>]*>(.*?)<\/h3>/i);
+        if (h3Match && h3Match[1]) {
+          santoNombre = decodeHtml(h3Match[1].trim());
+        } else {
+          const nameMatch = cleanedBio.match(/([^.]+)/);
+          if (nameMatch) santoNombre = decodeHtml(nameMatch[0]);
+        }
+
+        let finalBio = decodeHtml(bioText);
+        // Si el texto de la biografía empieza con el nombre del santo, lo removemos para evitar redundancia
+        if (santoNombre && santoNombre !== "Santo del Día" && finalBio.startsWith(santoNombre)) {
+          finalBio = finalBio.substring(santoNombre.length).trim();
+        }
 
         setSanto({
           nombre: santoNombre,
           imagen: santoImg,
-          biografia: decodeHtml(bioText)
+          biografia: finalBio
         });
       } catch (e) {
         console.error("Error cargando biografía:", e);
@@ -111,7 +121,13 @@ export function SantoBiografia() {
             border: "8px solid white",
             marginBottom: "2.5rem"
           }}>
-            <img src={santo?.imagen} alt={santo?.nombre} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            {santo?.imagen ? (
+              <img src={santo.imagen} alt={santo?.nombre} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+            ) : (
+              <div style={{ width: "100%", height: "100%", background: "#eee", display: "flex", alignItems: "center", justifyContent: "center", color: "#999" }}>
+                Sin imagen
+              </div>
+            )}
           </div>
           
           <div style={{ display: "flex", alignItems: "center", gap: "10px", color: "var(--color-accent)", marginBottom: "1rem" }}>
