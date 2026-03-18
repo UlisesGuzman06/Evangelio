@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Link from "next/link";
-import "../../pages.css"; // Usa los estilos generales que ya tienes
+import "../pages.css"; // Usa los estilos generales que ya tienes
 
 export function IntroduccionHechos() {
   return (

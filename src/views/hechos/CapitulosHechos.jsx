@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import capitulosData from "../../data/capitulosHechos.json";
-import "../../pages.css";
+import "../pages.css";
 
 export function CapituloMenu() {
   return (
