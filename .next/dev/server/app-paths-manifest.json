@@ -1,6 +1,7 @@
 {
   "/hechos/capitulos/[id]/page": "app/hechos/capitulos/[id]/page.js",
   "/hechos/capitulos/page": "app/hechos/capitulos/page.js",
+  "/hechos/conclusion/page": "app/hechos/conclusion/page.js",
   "/hechos/estructura/page": "app/hechos/estructura/page.js",
   "/hechos/historia/page": "app/hechos/historia/page.js",
   "/hechos/page": "app/hechos/page.js",

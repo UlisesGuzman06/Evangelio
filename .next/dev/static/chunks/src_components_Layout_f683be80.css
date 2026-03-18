@@ -125,8 +125,10 @@
   }
 
   .sidebar {
+    align-self: flex-start;
     height: calc(100vh - 70px);
     position: sticky;
+    top: 70px;
     transform: translateX(0);
   }
 

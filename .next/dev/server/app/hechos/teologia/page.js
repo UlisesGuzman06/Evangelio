@@ -1,6 +1,6 @@
 var R=require("../../../chunks/ssr/[turbopack]_runtime.js")("server/app/hechos/teologia/page.js")
 R.c("server/chunks/ssr/node_modules_next_dist_60335a91._.js")
-R.c("server/chunks/ssr/[root-of-the-server]__97a85bc3._.js")
+R.c("server/chunks/ssr/[root-of-the-server]__b9cb7b05._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_7381059c._.js")
 R.c("server/chunks/ssr/[externals]__7f148858._.js")
 R.c("server/chunks/ssr/node_modules_next_dist_client_components_builtin_global-error_ece394eb.js")

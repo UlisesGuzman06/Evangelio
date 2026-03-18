@@ -131,7 +131,9 @@
   .sidebar {
     transform: translateX(0);
     position: sticky;
+    top: 70px;
     height: calc(100vh - 70px);
+    align-self: flex-start;
   }
 
   .sidebar-overlay {
