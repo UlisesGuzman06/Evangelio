@@ -125,11 +125,16 @@
   }
 
   .sidebar {
-    align-self: flex-start;
+    width: 280px;
     height: calc(100vh - 70px);
-    position: sticky;
+    position: fixed;
     top: 70px;
+    left: 0;
     transform: translateX(0);
+  }
+
+  .main-content {
+    margin-left: 280px;
   }
 
   .sidebar-overlay {
