@@ -2,19 +2,11 @@
   {
     "capitulo": 1,
     "titulo": "La Ascensión y la elección de Matías",
-    "explicacionSencilla": "Antes de subir al cielo, Jesús promete enviar al Espíritu Santo a sus discípulos. Después de su ascensión, los apóstoles regresan a Jerusalén y, en oración, eligen a Matías para reemplazar a Judas Iscariote.",
-    "interpretacionTeologica": "Este capítulo sirve como puente entre el ministerio terrenal de Jesús y la era de la Iglesia. La ascensión no es el fin de la obra de Cristo, sino el comienzo de su obra a través del Espíritu Santo en la comunidad creyente.",
-    "simbolos": "La Nube: Representa la gloria y presencia de Dios (Shekinah) que envuelve a Jesús en su exaltación. Los dos varones con vestiduras blancas: Referencia a testigos celestiales (ángeles) que dan testimonio y promesa de su regreso.",
-    "datosHistoricos": "La elección de Matías buscaba restaurar el número de los Doce Apóstoles, simbolizando la restitución de las doce tribus de Israel y marcando a la Iglesia como el nuevo pueblo de Dios.",
+    "explicacionSencilla": "Antes de subir al cielo, Jesús promete enviar al Espíritu Santo. Los apóstoles eligen a Matías para completar el grupo de los Doce.",
+    "interpretacionTeologica": "Marca la transición del ministerio terrenal de Jesús al ministerio de la Iglesia guiada por el Espíritu.",
+    "simbolos": "La Nube (gloria divina), El Monte de los Olivos.",
+    "datosHistoricos": "Jerusalén bajo dominio romano; los discípulos esperan el cumplimiento de las promesas en comunidad.",
     "versiculos": [
-      {
-        "verse": 1,
-        "text": "En el primer tratado, oh Teófilo, hablé acerca de todas las cosas que Jesús comenzó a hacer y a enseñar,"
-      },
-      {
-        "verse": 2,
-        "text": "hasta el día en que fue recibido arriba, después de haber dado mandamientos por el Espíritu Santo a los apóstoles que había escogido;"
-      },
       {
         "verse": 8,
         "text": "pero recibiréis poder, cuando haya venido sobre vosotros el Espíritu Santo, y me seréis testigos en Jerusalén, en toda Judea, en Samaria, y hasta lo último de la tierra."
@@ -23,245 +15,380 @@
   },
   {
     "capitulo": 2,
-    "titulo": "Hechos Capítulo 2",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "El día de Pentecostés",
+    "explicacionSencilla": "El Espíritu Santo desciende sobre los discípulos en forma de lenguas de fuego. Pedro predica y tres mil personas se bautizan.",
+    "interpretacionTeologica": "El nacimiento público de la Iglesia. El Espíritu revierte la confusión de Babel uniendo a las naciones en un solo mensaje.",
+    "simbolos": "Viento recio, Lenguas de fuego, El hablar en lenguas.",
+    "datosHistoricos": "La fiesta de Pentecostés atraía a judíos de toda la diáspora a Jerusalén.",
+    "versiculos": [
+      {
+        "verse": 4,
+        "text": "Y fueron todos llenos del Espíritu Santo, y comenzaron a hablar en otras lenguas, según el Espíritu les daba que hablasen."
+      }
+    ]
   },
   {
     "capitulo": 3,
-    "titulo": "Hechos Capítulo 3",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Curación de un cojo",
+    "explicacionSencilla": "Pedro y Juan sanan a un hombre cojo en la puerta del Templo llamada la Hermosa. Pedro explica que el milagro ocurrió por el poder de Jesús.",
+    "interpretacionTeologica": "La continuidad de los milagros de Jesús a través de sus apóstoles como prueba de su resurrección.",
+    "simbolos": "La Puerta Hermosa del Templo.",
+    "datosHistoricos": "El Templo de Herodes seguía siendo el centro de la vida religiosa judía y escenario inicial de la predicación cristiana.",
+    "versiculos": [
+      {
+        "verse": 6,
+        "text": "Mas Pedro dijo: No tengo plata ni oro, pero lo que tengo te doy; en el nombre de Jesucristo de Nazaret, levántate y anda."
+      }
+    ]
   },
   {
     "capitulo": 4,
-    "titulo": "Hechos Capítulo 4",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Pedro y Juan ante el Concilio",
+    "explicacionSencilla": "Las autoridades arrestan a Pedro y Juan por predicar. Ellos declaran valientemente que deben obedecer a Dios antes que a los hombres.",
+    "interpretacionTeologica": "El conflicto entre el poder mundano/religioso institucional y el poder profético del Espíritu.",
+    "simbolos": "La Piedra Angular.",
+    "datosHistoricos": "El Sanedrín era el tribunal supremo religioso de los judíos bajo autoridad romana.",
+    "versiculos": [
+      {
+        "verse": 12,
+        "text": "Y en ningún otro hay salvación; porque no hay otro nombre bajo el cielo, dado a los hombres, en que podamos ser salvos."
+      }
+    ]
   },
   {
     "capitulo": 5,
-    "titulo": "Hechos Capítulo 5",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Ananías, Safira y los Apóstoles",
+    "explicacionSencilla": "Ananías y Safira mueren tras mentir al Espíritu Santo sobre una ofrenda. Los apóstoles son encarcelados y liberados milagrosamente por un ángel.",
+    "interpretacionTeologica": "La santidad requerida en la nueva comunidad y la imposibilidad de detener la Palabra de Dios.",
+    "simbolos": "La sombra de Pedro, Ánimas liberadas.",
+    "datosHistoricos": "Gamaliel, un respetado maestro de la ley, aconseja prudencia al Sanedrín respecto a los cristianos.",
+    "versiculos": [
+      {
+        "verse": 29,
+        "text": "Respondiendo Pedro y los apóstoles, dijeron: Es necesario obedecer a Dios antes que a los hombres."
+      }
+    ]
   },
   {
     "capitulo": 6,
-    "titulo": "Hechos Capítulo 6",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Elección de los siete diáconos",
+    "explicacionSencilla": "Para atender a las viudas, se eligen siete hombres llenos del Espíritu. Esteban, uno de ellos, destaca por su gracia y poder.",
+    "interpretacionTeologica": "El servicio práctico (diaconía) es inseparable de la misión espiritual de la Iglesia.",
+    "simbolos": "La imposición de manos.",
+    "datosHistoricos": "Tensión entre judíos helenistas (de habla griega) y hebreos dentro de la comunidad cristiana primitiva.",
+    "versiculos": [
+      {
+        "verse": 3,
+        "text": "Buscad, pues, hermanos, de entre vosotros a siete varones de buen testimonio, llenos del Espíritu Santo y de sabiduría, a quienes encarguemos de este trabajo."
+      }
+    ]
   },
   {
     "capitulo": 7,
-    "titulo": "Hechos Capítulo 7",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "El discurso y martirio de Esteban",
+    "explicacionSencilla": "Esteban resume la historia de Israel ante el Sanedrín. Es apedreado hasta la muerte, convirtiéndose en el primer mártir cristiano.",
+    "interpretacionTeologica": "La culminación del rechazo de Israel a los profetas de Dios, ahora personificado en el juicio a Esteban.",
+    "simbolos": "Piedras de martirio, Rostro de ángel, Cielo abierto.",
+    "datosHistoricos": "Saulo (Pablo) aparece por primera vez consintiendo en la muerte de Esteban.",
+    "versiculos": [
+      {
+        "verse": 59,
+        "text": "Y apedreaban a Esteban, mientras él invocaba y decía: Señor Jesús, recibe mi espíritu."
+      }
+    ]
   },
   {
     "capitulo": 8,
-    "titulo": "Hechos Capítulo 8",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Felipe en Samaria y el Etíope",
+    "explicacionSencilla": "La persecución dispersa a los creyentes. Felipe predica en Samaria y bautiza a un funcionario etíope en el camino a Gaza.",
+    "interpretacionTeologica": "El Evangelio rompe las barreras geográficas y étnicas, llegando a los excluidos del judaísmo oficial.",
+    "simbolos": "Agua del bautismo, El desierto.",
+    "datosHistoricos": "Samaria representaba el primer paso de la expansión del Evangelio fuera de Judea.",
+    "versiculos": [
+      {
+        "verse": 37,
+        "text": "Felipe dijo: Si crees de todo corazón, bien puedes. Y respondiendo, dijo: Creo que Jesucristo es el Hijo de Dios."
+      }
+    ]
   },
   {
     "capitulo": 9,
-    "titulo": "Hechos Capítulo 9",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "La conversión de Saulo",
+    "explicacionSencilla": "Jesús se aparece a Saulo en el camino a Damasco. Él se queda ciego, se bautiza y comienza a predicar que Jesús es el Mesías.",
+    "interpretacionTeologica": "La gracia transformadora de Dios que convierte al mayor perseguidor en el mayor apóstol.",
+    "simbolos": "La luz del cielo, La ceguera temporal.",
+    "datosHistoricos": "Damasco era una ciudad clave con una importante comunidad judía.",
+    "versiculos": [
+      {
+        "verse": 4,
+        "text": "y cayendo en tierra, oyó una voz que le decía: Saulo, Saulo, ¿por qué me persigues?"
+      }
+    ]
   },
   {
     "capitulo": 10,
-    "titulo": "Hechos Capítulo 10",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Pedro y Cornelio",
+    "explicacionSencilla": "Dios le muestra a Pedro que no debe llamar a nadie impuro. Pedro visita al centurión gentil Cornelio y el Espíritu desciende sobre ellos.",
+    "interpretacionTeologica": "La apertura oficial de la salvación a los gentiles sin necesidad de hacerse judíos primero.",
+    "simbolos": "El lienzo con animales, El Espíritu Santo sobre gentiles.",
+    "datosHistoricos": "Cesarea era la capital administrativa romana de Judea y residencia de oficiales como Cornelio.",
+    "versiculos": [
+      {
+        "verse": 34,
+        "text": "Entonces Pedro, abriendo la boca, dijo: En verdad comprendo que Dios no hace acepción de personas."
+      }
+    ]
   },
   {
     "capitulo": 11,
-    "titulo": "Hechos Capítulo 11",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "La Iglesia en Antioquía",
+    "explicacionSencilla": "Pedro defiende el bautismo de gentiles. En Antioquía nace una iglesia mixta e importante donde a los discípulos se les llama cristianos por primera vez.",
+    "interpretacionTeologica": "La validación comunitaria de la misión a los gentiles bajo la guía del Espíritu.",
+    "simbolos": "El nombre Cristiano.",
+    "datosHistoricos": "Antioquía de Siria era la tercera ciudad más grande del Imperio Romano.",
+    "versiculos": [
+      {
+        "verse": 26,
+        "text": "Y se congregaron allí todo un año con la iglesia, y enseñaron a mucha gente; y a los discípulos se les llamó cristianos por primera vez en Antioquía."
+      }
+    ]
   },
   {
     "capitulo": 12,
-    "titulo": "Hechos Capítulo 12",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Muerte de Jacobo y liberación de Pedro",
+    "explicacionSencilla": "El rey Herodes mata a Jacobo y encarcela a Pedro. Un ángel libera a Pedro de la prisión mientras la iglesia ora por él.",
+    "interpretacionTeologica": "El poder de la oración intercesora frente a la persecución política.",
+    "simbolos": "Cadenas rotas, El ángel libertador.",
+    "datosHistoricos": "Herodes Agripa I buscaba el favor de las autoridades judías persiguiendo a los líderes cristianos.",
+    "versiculos": [
+      {
+        "verse": 5,
+        "text": "Así que Pedro estaba custodiado en la cárcel; pero la iglesia hacía sin cesar oración a Dios por él."
+      }
+    ]
   },
   {
     "capitulo": 13,
-    "titulo": "Hechos Capítulo 13",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Primer viaje misionero de Pablo",
+    "explicacionSencilla": "El Espíritu Santo aparta a Bernabé y Saulo (Pablo) para la misión. Viajan a Chipre y Galacia predicando en las sinagogas.",
+    "interpretacionTeologica": "El inicio sistemático de la misión mundial bajo la autoridad del Espíritu Santo.",
+    "simbolos": "La imposición de manos en Antioquía.",
+    "datosHistoricos": "Comienza el cambio de nombre de Saulo a Pablo mientras interactúa con el mundo romano.",
+    "versiculos": [
+      {
+        "verse": 2,
+        "text": "Ministrando éstos al Señor, y ayunando, dijo el Espíritu Santo: Apartadme a Bernabé y a Saulo para la obra a que los he llamado."
+      }
+    ]
   },
   {
     "capitulo": 14,
-    "titulo": "Hechos Capítulo 14",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Ministerio en Iconio y Listra",
+    "explicacionSencilla": "En Listra sanan a un hombre, los confunden con dioses y luego apedrean a Pablo. Sobreviven y fortalecen las iglesias recién fundadas.",
+    "interpretacionTeologica": "La inconstancia de la gloria humana comparada con la perseverancia de los apóstoles.",
+    "simbolos": "Sacrificios paganos evitados, Piedras de persecución.",
+    "datosHistoricos": "Las ciudades de Licaonia presentaban un desafío de evangelización en contextos puramente paganos.",
+    "versiculos": [
+      {
+        "verse": 22,
+        "text": "confirmando los ánimos de los discípulos, exhortándoles a que permaneciesen en la fe, y diciéndoles: Es necesario que a través de muchas tribulaciones entremos en el reino de Dios."
+      }
+    ]
   },
   {
     "capitulo": 15,
-    "titulo": "Hechos Capítulo 15",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "El Concilio de Jerusalén",
+    "explicacionSencilla": "Los líderes se reúnen para decidir si los gentiles deben circuncidarse. Deciden que no, pidiendo solo que eviten prácticas ligadas a la idolatría.",
+    "interpretacionTeologica": "La salvación por la sola gracia es ratificada por toda la Iglesia.",
+    "simbolos": "La carta de los apóstoles.",
+    "datosHistoricos": "Primer gran debate eclesiástico que definió el futuro universal del cristianismo.",
+    "versiculos": [
+      {
+        "verse": 11,
+        "text": "Antes creemos que por la gracia del Señor Jesús seremos salvos, de igual modo que ellos."
+      }
+    ]
   },
   {
     "capitulo": 16,
-    "titulo": "Hechos Capítulo 16",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "El llamado a Macedonia",
+    "explicacionSencilla": "Pablo tiene una visión de un hombre pidiendo ayuda. Viajan a Filipos, donde se convierte Lidia y el carcelero después de un terremoto.",
+    "interpretacionTeologica": "El Espíritu dirige activamente el avance geográfico de la misión hacia Europa.",
+    "simbolos": "Visión de Macedonia, Terremoto en la cárcel.",
+    "datosHistoricos": "Filipos era una colonia romana importante en la Vía Egnacia.",
+    "versiculos": [
+      {
+        "verse": 31,
+        "text": "Ellos dijeron: Cree en el Señor Jesucristo, y serás salvo, tú y tu casa."
+      }
+    ]
   },
   {
     "capitulo": 17,
-    "titulo": "Hechos Capítulo 17",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Tesalónica, Berea y Atenas",
+    "explicacionSencilla": "Pablo razona en Atenas ante el Aerópago sobre el Dios No Conocido. En Berea, los judíos son elogiados por estudiar las Escrituras.",
+    "interpretacionTeologica": "El diálogo entre la fe cristiana y la filosofía/cultura griega clásica.",
+    "simbolos": "Altar al Dios No Conocido, El Areópago.",
+    "datosHistoricos": "Atenas todavía era el centro intelectual del mundo romano aunque su poder político había decaído.",
+    "versiculos": [
+      {
+        "verse": 23,
+        "text": "porque pasando y mirando vuestros santuarios, hallé también un altar en el cual estaba esta inscripción: AL DIOS NO CONOCIDO. Al que vosotros adoráis, pues, sin conocerle, es a quien yo os anuncio."
+      }
+    ]
   },
   {
     "capitulo": 18,
-    "titulo": "Hechos Capítulo 18",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Pablo en Corinto",
+    "explicacionSencilla": "Pablo pasa un año y medio en Corinto trabajando con Aquila y Priscila. El Señor le da consuelo en visión para seguir predicando.",
+    "interpretacionTeologica": "La fidelidad de Dios que provee colaboradores y seguridad en medio de la oposición.",
+    "simbolos": "Telas de tiendas (trabajo manual).",
+    "datosHistoricos": "Corinto era una metrópolis comercial conocida por su diversidad y su moralidad relajada.",
+    "versiculos": [
+      {
+        "verse": 9,
+        "text": "Entonces el Señor dijo a Pablo en visión de noche: No temas, sino habla, y no calles;"
+      }
+    ]
   },
   {
     "capitulo": 19,
-    "titulo": "Hechos Capítulo 19",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Escándalo en Éfeso",
+    "explicacionSencilla": "El ministerio de Pablo afecta el negocio de los fabricantes de ídolos de Diana (Artemisa), provocando un gran disturbio en el teatro.",
+    "interpretacionTeologica": "El triunfo del Evangelio sobre las supersticiones y la idolatría económica.",
+    "simbolos": "Estatua de Diana, Libros de magia quemados.",
+    "datosHistoricos": "El templo de Artemisa en Éfeso era una de las maravillas del mundo antiguo.",
+    "versiculos": [
+      {
+        "verse": 20,
+        "text": "Así crecía y prevalecía poderosamente la palabra del Señor."
+      }
+    ]
   },
   {
     "capitulo": 20,
-    "titulo": "Hechos Capítulo 20",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Despedida en Mileto",
+    "explicacionSencilla": "Pablo resucita a Eutico en Troas y da un emotivo discurso de despedida a los ancianos de Éfeso, sabiendo que no los volverá a ver.",
+    "interpretacionTeologica": "El ejemplo del pastor que entrega su vida con integridad y amor por el rebaño.",
+    "simbolos": "Lágrimas de despedida.",
+    "datosHistoricos": "Pablo comienza su viaje final hacia Jerusalén sabiendo que le esperan prisiones.",
+    "versiculos": [
+      {
+        "verse": 24,
+        "text": "Pero de ninguna cosa hago caso, ni estimo preciosa mi vida para mí mismo, con tal que acabe mi carrera con gozo, y el ministerio que recibí del Señor Jesús, para dar testimonio del evangelio de la gracia de Dios."
+      }
+    ]
   },
   {
     "capitulo": 21,
-    "titulo": "Hechos Capítulo 21",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Arresto en Jerusalén",
+    "explicacionSencilla": "A pesar de las advertencias, Pablo sube a Jerusalén. Es acusado falsamente de profanar el Templo y arrestado por los romanos.",
+    "interpretacionTeologica": "La disposición a sufrir por Cristo siguiendo sus mismos pasos hacia la pasión.",
+    "simbolos": "Cinto de Agabo.",
+    "datosHistoricos": "Las tensiones entre judíos y cristianos sobre la Ley estaban en su punto más alto.",
+    "versiculos": [
+      {
+        "verse": 13,
+        "text": "Entonces Pablo respondió: ¿Qué hacéis llorando y quebrantándome el corazón? Porque yo estoy dispuesto no sólo a ser atado, mas aun a morir en Jerusalén por el nombre del Señor Jesús."
+      }
+    ]
   },
   {
     "capitulo": 22,
-    "titulo": "Hechos Capítulo 22",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Defensa de Pablo",
+    "explicacionSencilla": "Pablo cuenta su conversión desde las gradas de la fortaleza. El pueblo se enfurece cuando menciona su misión a los gentiles.",
+    "interpretacionTeologica": "El testimonio personal como herramienta poderosa de evangelización y defensa.",
+    "simbolos": "Ciudadanía romana de Pablo.",
+    "datosHistoricos": "El uso legal de la ciudadanía romana salvó a Pablo de ser azotado sin juicio.",
+    "versiculos": [
+      {
+        "verse": 16,
+        "text": "Ahora, pues, ¿por qué te detienes? Levántate y bautízate, y lava tus pecados, invocando su nombre."
+      }
+    ]
   },
   {
     "capitulo": 23,
-    "titulo": "Hechos Capítulo 23",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Complot y traslado a Cesarea",
+    "explicacionSencilla": "Jesús se le aparece a Pablo para animarlo. Un grupo de judíos jura matarlo, pero es trasladado bajo escolta militar a Cesarea.",
+    "interpretacionTeologica": "La providencia divina que utiliza incluso estructuras estatales para proteger a sus siervos.",
+    "simbolos": "Inscripción de una carta de Claudio Lisias.",
+    "datosHistoricos": "El traslado nocturno con 470 soldados muestra la gravedad de la amenaza judía.",
+    "versiculos": [
+      {
+        "verse": 11,
+        "text": "A la noche siguiente se le presentó el Señor y le dijo: Ten ánimo, Pablo, pues como has testificado de mí en Jerusalén, así es necesario que testifiques también en Roma."
+      }
+    ]
   },
   {
     "capitulo": 24,
-    "titulo": "Hechos Capítulo 24",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Ante el gobernador Félix",
+    "explicacionSencilla": "Pablo se defiende de las acusaciones del orador Tértulo. Permanece preso dos años mientras Félix espera un soborno que nunca llega.",
+    "interpretacionTeologica": "La paciencia en la injusticia y la oportunidad de predicar ante gobernantes.",
+    "simbolos": "Cadenas con libertad relativa.",
+    "datosHistoricos": "Antonio Félix fue procurador de Judea entre los años 52 y 59 d.C.",
+    "versiculos": [
+      {
+        "verse": 25,
+        "text": "Pero al disertar Pablo acerca de la justicia, del dominio propio y del juicio venidero, Félix se espantó."
+      }
+    ]
   },
   {
     "capitulo": 25,
-    "titulo": "Hechos Capítulo 25",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Apelación al César",
+    "explicacionSencilla": "El nuevo gobernador Festo intenta complacer a los judíos. Pablo, para evitar un juicio injusto en Jerusalén, apela al César.",
+    "interpretacionTeologica": "El uso sabio de los derechos legales para cumplir el propósito de Dios de llegar a Roma.",
+    "simbolos": "El tribunal de Festo.",
+    "datosHistoricos": "Ad Calsarem Appello: El derecho de un ciudadano romano a ser juzgado directamente por el Emperador.",
+    "versiculos": [
+      {
+        "verse": 11,
+        "text": "Porque si algún agravio, o cosa alguna digna de muerte he hecho, no rehúso morir; pero si nada hay de las cosas de que éstos me acusan, nadie puede entregarme a ellos. A César apelo."
+      }
+    ]
   },
   {
     "capitulo": 26,
-    "titulo": "Hechos Capítulo 26",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Pablo ante el rey Agripa",
+    "explicacionSencilla": "Pablo da su discurso de defensa más brillante. Agripa reconoce que Pablo no ha hecho nada digno de muerte ni prision.",
+    "interpretacionTeologica": "La locura de la cruz ante los sabios y poderosos del mundo.",
+    "simbolos": "Poco falta para que me persuadas (dichos de Agripa).",
+    "datosHistoricos": "Herodes Agripa II fue el último de la dinastía herodiana con autoridad real.",
+    "versiculos": [
+      {
+        "verse": 28,
+        "text": "Entonces Agripa dijo a Pablo: Por poco me persuades a ser cristiano."
+      }
+    ]
   },
   {
     "capitulo": 27,
-    "titulo": "Hechos Capítulo 27",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Naufragio en el mar",
+    "explicacionSencilla": "Un gran temporal destruye el barco en el que Pablo viajaba a Roma. Todos sobreviven gracias a la promesa de Dios a Pablo.",
+    "interpretacionTeologica": "La fe inquebrantable que trae paz y salvación a los que rodean al creyente en medio de la tormenta.",
+    "simbolos": "El barco destrozado, El ancla de la esperanza.",
+    "datosHistoricos": "Navegación invernal en el Mediterráneo, extremadamente peligrosa en la antigüedad.",
+    "versiculos": [
+      {
+        "verse": 25,
+        "text": "Por tanto, oh varones, tened buen ánimo; porque yo confío en Dios que será así como se me ha dicho."
+      }
+    ]
   },
   {
     "capitulo": 28,
-    "titulo": "Hechos Capítulo 28",
-    "explicacionSencilla": "En construcción...",
-    "interpretacionTeologica": "Próximamente",
-    "simbolos": "",
-    "datosHistoricos": "",
-    "versiculos": []
+    "titulo": "Pablo llega a Roma",
+    "explicacionSencilla": "Después de tres meses en Malta, Pablo llega finalmente a Roma, donde vive dos años bajo arresto domiciliario predicando sin impedimento.",
+    "interpretacionTeologica": "El Evangelio ha llegado al centro del mundo conocido. La misión continúa abierta.",
+    "simbolos": "La víbora en Malta, La casa alquilada en Roma.",
+    "datosHistoricos": "El libro termina abruptamente, sugiriendo que la historia de la Iglesia sigue escribiéndose.",
+    "versiculos": [
+      {
+        "verse": 31,
+        "text": "predicando el reino de Dios y enseñando acerca del Señor Jesucristo, abiertamente y sin impedimento."
+      }
+    ]
   }
 ]

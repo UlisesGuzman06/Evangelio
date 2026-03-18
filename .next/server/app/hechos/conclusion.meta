@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/hechos/layout,_N_T_/hechos/conclusion/layout,_N_T_/hechos/conclusion/page,_N_T_/hechos/conclusion"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/hechos/conclusion/__PAGE__",
+    "/hechos/conclusion",
+    "/hechos",
+    "/_index",
+    "/_head"
+  ]
+}

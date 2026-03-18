@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/juan/layout,_N_T_/juan/teologia/layout,_N_T_/juan/teologia/page,_N_T_/juan/teologia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/juan/teologia/__PAGE__",
+    "/juan/teologia",
+    "/juan",
+    "/_index",
+    "/_head"
+  ]
+}

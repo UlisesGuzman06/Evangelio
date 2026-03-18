@@ -1,0 +1,15 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/mateo/layout,_N_T_/mateo/page,_N_T_/mateo"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/mateo/__PAGE__",
+    "/mateo",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/hechos/layout,_N_T_/hechos/teologia/layout,_N_T_/hechos/teologia/page,_N_T_/hechos/teologia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/hechos/teologia/__PAGE__",
+    "/hechos/teologia",
+    "/hechos",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/juan/layout,_N_T_/juan/pasajes/layout,_N_T_/juan/pasajes/page,_N_T_/juan/pasajes"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/juan/pasajes/__PAGE__",
+    "/juan/pasajes",
+    "/juan",
+    "/_index",
+    "/_head"
+  ]
+}

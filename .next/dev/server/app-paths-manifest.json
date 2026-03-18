@@ -8,6 +8,7 @@
   "/hechos/pasajes/page": "app/hechos/pasajes/page.js",
   "/hechos/temas/page": "app/hechos/temas/page.js",
   "/hechos/teologia/page": "app/hechos/teologia/page.js",
+  "/lucas/page": "app/lucas/page.js",
   "/mateo/capitulos/page": "app/mateo/capitulos/page.js",
   "/mateo/estructura/page": "app/mateo/estructura/page.js",
   "/mateo/historia/page": "app/mateo/historia/page.js",
@@ -15,5 +16,6 @@
   "/mateo/pasajes/page": "app/mateo/pasajes/page.js",
   "/mateo/temas/page": "app/mateo/temas/page.js",
   "/mateo/teologia/page": "app/mateo/teologia/page.js",
-  "/page": "app/page.js"
+  "/page": "app/page.js",
+  "/santo-biografia/[id]/page": "app/santo-biografia/[id]/page.js"
 }

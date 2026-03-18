@@ -7,21 +7,31 @@ import "./pages.css";
 export function Home() {
   return (
     <div className="app-container">
-      {/* Navbar Minimalista */}
-      <header className="navbar glass-panel">
-        <div
-          className="navbar-content container"
-          style={{ justifyContent: "center" }}
-        >
-          <div className="logo text-center">
-            <Link href="/">
-              <h1
-                style={{ display: "flex", alignItems: "center", gap: "10px" }}
-              >
-                <Library size={24} /> La Santa Biblia
-              </h1>
-            </Link>
-          </div>
+
+      {/* Header elegante */}
+      <header style={{
+        borderBottom: "1px solid var(--color-border)",
+        padding: "1.5rem 0",
+        background: "rgba(255, 255, 255, 0.85)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+        position: "sticky",
+        top: 0,
+        zIndex: 50,
+      }}>
+        <div className="container" style={{ textAlign: "center" }}>
+          <Link href="/" style={{ textDecoration: "none", color: "inherit", cursor: "default" }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+              <Library size={22} style={{ color: "var(--color-accent)" }} />
+              <span style={{
+                fontFamily: "var(--font-heading)",
+                fontSize: "1.4rem",
+                fontWeight: "700",
+                color: "var(--color-dark)",
+                letterSpacing: "0.02em",
+              }}>La Santa Biblia</span>
+            </div>
+          </Link>
         </div>
       </header>
 
@@ -360,10 +370,20 @@ export function Home() {
         </div>
       </main>
 
-      {/* Footer Minimalista */}
-      <footer className="footer" style={{ borderTop: "none", paddingTop: "0" }}>
+      {/* Footer */}
+      <footer style={{
+        borderTop: "1px solid var(--color-border)",
+        padding: "1.5rem 0",
+        background: "rgba(255, 255, 255, 0.85)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
+      }}>
         <div className="container" style={{ textAlign: "center" }}>
-          <p>Un estudio profundo sobre La Santa Biblia.</p>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: "8px", marginBottom: "0.4rem" }}>
+            <Library size={16} style={{ color: "var(--color-accent)" }} />
+            <span style={{ fontFamily: "var(--font-heading)", fontSize: "1rem", fontWeight: "600", color: "var(--color-dark)" }}>La Santa Biblia</span>
+          </div>
+          <p style={{ color: "var(--color-text-light)", fontSize: "0.85rem", fontFamily: "var(--font-ui)" }}>Un estudio profundo sobre la Palabra de Dios.</p>
         </div>
       </footer>
     </div>

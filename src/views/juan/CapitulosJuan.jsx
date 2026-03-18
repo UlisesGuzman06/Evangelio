@@ -186,7 +186,7 @@ export function CapituloDetalle() {
         <div
           className="biblical-text"
           style={{
-            columnCount: window.innerWidth > 768 ? 2 : 1,
+            columnCount: 2,
             columnGap: "3rem",
           }}
         >

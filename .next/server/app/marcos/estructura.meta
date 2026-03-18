@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/marcos/layout,_N_T_/marcos/estructura/layout,_N_T_/marcos/estructura/page,_N_T_/marcos/estructura"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/marcos/estructura/__PAGE__",
+    "/marcos/estructura",
+    "/marcos",
+    "/_index",
+    "/_head"
+  ]
+}

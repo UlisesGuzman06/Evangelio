@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/lucas/layout,_N_T_/lucas/historia/layout,_N_T_/lucas/historia/page,_N_T_/lucas/historia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/lucas/historia/__PAGE__",
+    "/lucas/historia",
+    "/lucas",
+    "/_index",
+    "/_head"
+  ]
+}

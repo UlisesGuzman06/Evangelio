@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/marcos/layout,_N_T_/marcos/pasajes/layout,_N_T_/marcos/pasajes/page,_N_T_/marcos/pasajes"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/marcos/pasajes/__PAGE__",
+    "/marcos/pasajes",
+    "/marcos",
+    "/_index",
+    "/_head"
+  ]
+}

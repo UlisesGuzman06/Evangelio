@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/mateo/layout,_N_T_/mateo/temas/layout,_N_T_/mateo/temas/page,_N_T_/mateo/temas"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/mateo/temas/__PAGE__",
+    "/mateo/temas",
+    "/mateo",
+    "/_index",
+    "/_head"
+  ]
+}

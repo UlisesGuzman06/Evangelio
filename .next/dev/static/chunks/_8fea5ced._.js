@@ -321,7 +321,8 @@ function EvangelioDelDia() {
                     boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
                     border: "1px solid var(--color-border)",
                     display: "flex",
-                    flexDirection: window.innerWidth < 768 ? "column" : "row",
+                    flexDirection: "row",
+                    flexWrap: "wrap",
                     gap: "2rem",
                     alignItems: "center"
                 },
@@ -346,12 +347,12 @@ function EvangelioDelDia() {
                             }
                         }, void 0, false, {
                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                            lineNumber: 308,
+                            lineNumber: 309,
                             columnNumber: 15
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 299,
+                        lineNumber: 300,
                         columnNumber: 13
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -374,7 +375,7 @@ function EvangelioDelDia() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 313,
+                                        lineNumber: 314,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -390,13 +391,13 @@ function EvangelioDelDia() {
                                         ]
                                     }, void 0, true, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 314,
+                                        lineNumber: 315,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                lineNumber: 312,
+                                lineNumber: 313,
                                 columnNumber: 13
                             }, this),
                             data.santoId && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -421,19 +422,19 @@ function EvangelioDelDia() {
                                         size: 18
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 336,
+                                        lineNumber: 337,
                                         columnNumber: 40
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                lineNumber: 319,
+                                lineNumber: 320,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 311,
+                        lineNumber: 312,
                         columnNumber: 11
                     }, this)
                 ]
@@ -473,12 +474,12 @@ function EvangelioDelDia() {
                                         }
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 355,
+                                        lineNumber: 356,
                                         columnNumber: 15
                                     }, this)
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 354,
+                                    lineNumber: 355,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -493,7 +494,7 @@ function EvangelioDelDia() {
                                             children: index === 0 ? "Primera Lectura" : "Segunda Lectura"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 358,
+                                            lineNumber: 359,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -505,19 +506,19 @@ function EvangelioDelDia() {
                                             children: lectura.ref
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 361,
+                                            lineNumber: 362,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 357,
+                                    lineNumber: 358,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                            lineNumber: 353,
+                            lineNumber: 354,
                             columnNumber: 11
                         }, this),
                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -532,13 +533,13 @@ function EvangelioDelDia() {
                             children: lectura.texto
                         }, void 0, false, {
                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                            lineNumber: 364,
+                            lineNumber: 365,
                             columnNumber: 11
                         }, this)
                     ]
                 }, index, true, {
                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                    lineNumber: 345,
+                    lineNumber: 346,
                     columnNumber: 9
                 }, this)),
             data.salmo && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -572,12 +573,12 @@ function EvangelioDelDia() {
                                     }
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 388,
+                                    lineNumber: 389,
                                     columnNumber: 15
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                lineNumber: 387,
+                                lineNumber: 388,
                                 columnNumber: 13
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -592,7 +593,7 @@ function EvangelioDelDia() {
                                         children: "Salmo Responsorial"
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 391,
+                                        lineNumber: 392,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -604,19 +605,19 @@ function EvangelioDelDia() {
                                         children: data.salmoRef
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 392,
+                                        lineNumber: 393,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                lineNumber: 390,
+                                lineNumber: 391,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 386,
+                        lineNumber: 387,
                         columnNumber: 11
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -632,13 +633,13 @@ function EvangelioDelDia() {
                         children: data.salmo
                     }, void 0, false, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 395,
+                        lineNumber: 396,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                lineNumber: 379,
+                lineNumber: 380,
                 columnNumber: 9
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -682,12 +683,12 @@ function EvangelioDelDia() {
                                             }
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 434,
+                                            lineNumber: 435,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 433,
+                                        lineNumber: 434,
                                         columnNumber: 13
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -706,18 +707,18 @@ function EvangelioDelDia() {
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 437,
+                                            lineNumber: 438,
                                             columnNumber: 15
                                         }, this)
                                     }, void 0, false, {
                                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                        lineNumber: 436,
+                                        lineNumber: 437,
                                         columnNumber: 13
                                     }, this)
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                lineNumber: 432,
+                                lineNumber: 433,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -732,24 +733,24 @@ function EvangelioDelDia() {
                                     size: 28
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 443,
+                                    lineNumber: 444,
                                     columnNumber: 28
                                 }, this) : /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$lucide$2d$react$2f$dist$2f$esm$2f$icons$2f$chevron$2d$down$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__$3c$export__default__as__ChevronDown$3e$__["ChevronDown"], {
                                     size: 28
                                 }, void 0, false, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 443,
+                                    lineNumber: 444,
                                     columnNumber: 54
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                lineNumber: 442,
+                                lineNumber: 443,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 420,
+                        lineNumber: 421,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -782,7 +783,7 @@ function EvangelioDelDia() {
                                             children: "“"
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 456,
+                                            lineNumber: 457,
                                             columnNumber: 16
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -797,13 +798,13 @@ function EvangelioDelDia() {
                                             children: data.texto
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 457,
+                                            lineNumber: 458,
                                             columnNumber: 16
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 455,
+                                    lineNumber: 456,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -827,7 +828,7 @@ function EvangelioDelDia() {
                                             children: data.ref
                                         }, void 0, false, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 470,
+                                            lineNumber: 471,
                                             columnNumber: 15
                                         }, this),
                                         data.refParsed && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$client$2f$app$2d$dir$2f$link$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["default"], {
@@ -861,30 +862,30 @@ function EvangelioDelDia() {
                                                     size: 22
                                                 }, void 0, false, {
                                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                                    lineNumber: 500,
+                                                    lineNumber: 501,
                                                     columnNumber: 40
                                                 }, this)
                                             ]
                                         }, void 0, true, {
                                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                            lineNumber: 474,
+                                            lineNumber: 475,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                                    lineNumber: 469,
+                                    lineNumber: 470,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                            lineNumber: 454,
+                            lineNumber: 455,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 448,
+                        lineNumber: 449,
                         columnNumber: 9
                     }, this),
                     !expandedGsp && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -902,13 +903,13 @@ function EvangelioDelDia() {
                         ]
                     }, void 0, true, {
                         fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                        lineNumber: 509,
+                        lineNumber: 510,
                         columnNumber: 11
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                lineNumber: 410,
+                lineNumber: 411,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("style", {
@@ -917,7 +918,7 @@ function EvangelioDelDia() {
       `
             }, void 0, false, {
                 fileName: "[project]/src/components/EvangelioDelDia.jsx",
-                lineNumber: 515,
+                lineNumber: 516,
                 columnNumber: 7
             }, this)
         ]

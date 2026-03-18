@@ -1,0 +1,351 @@
+{
+  "version": 3,
+  "pages404": true,
+  "appType": "app",
+  "caseSensitive": false,
+  "basePath": "",
+  "redirects": [
+    {
+      "source": "/:path+/",
+      "destination": "/:path+",
+      "internal": true,
+      "priority": true,
+      "statusCode": 308,
+      "regex": "^(?:/((?:[^/]+?)(?:/(?:[^/]+?))*))/$"
+    }
+  ],
+  "headers": [],
+  "rewrites": {
+    "beforeFiles": [],
+    "afterFiles": [],
+    "fallback": []
+  },
+  "dynamicRoutes": [
+    {
+      "page": "/hechos/capitulos/[id]",
+      "regex": "^/hechos/capitulos/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/hechos/capitulos/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/juan/capitulos/[id]",
+      "regex": "^/juan/capitulos/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/juan/capitulos/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/lucas/capitulos/[id]",
+      "regex": "^/lucas/capitulos/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/lucas/capitulos/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/marcos/capitulos/[id]",
+      "regex": "^/marcos/capitulos/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/marcos/capitulos/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/mateo/capitulos/[id]",
+      "regex": "^/mateo/capitulos/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/mateo/capitulos/(?<nxtPid>[^/]+?)(?:/)?$"
+    },
+    {
+      "page": "/santo-biografia/[id]",
+      "regex": "^/santo\\-biografia/([^/]+?)(?:/)?$",
+      "routeKeys": {
+        "nxtPid": "nxtPid"
+      },
+      "namedRegex": "^/santo\\-biografia/(?<nxtPid>[^/]+?)(?:/)?$"
+    }
+  ],
+  "staticRoutes": [
+    {
+      "page": "/",
+      "regex": "^/(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/(?:/)?$"
+    },
+    {
+      "page": "/_global-error",
+      "regex": "^/_global\\-error(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_global\\-error(?:/)?$"
+    },
+    {
+      "page": "/_not-found",
+      "regex": "^/_not\\-found(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/_not\\-found(?:/)?$"
+    },
+    {
+      "page": "/hechos",
+      "regex": "^/hechos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos(?:/)?$"
+    },
+    {
+      "page": "/hechos/capitulos",
+      "regex": "^/hechos/capitulos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/capitulos(?:/)?$"
+    },
+    {
+      "page": "/hechos/conclusion",
+      "regex": "^/hechos/conclusion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/conclusion(?:/)?$"
+    },
+    {
+      "page": "/hechos/estructura",
+      "regex": "^/hechos/estructura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/estructura(?:/)?$"
+    },
+    {
+      "page": "/hechos/historia",
+      "regex": "^/hechos/historia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/historia(?:/)?$"
+    },
+    {
+      "page": "/hechos/pasajes",
+      "regex": "^/hechos/pasajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/pasajes(?:/)?$"
+    },
+    {
+      "page": "/hechos/temas",
+      "regex": "^/hechos/temas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/temas(?:/)?$"
+    },
+    {
+      "page": "/hechos/teologia",
+      "regex": "^/hechos/teologia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/hechos/teologia(?:/)?$"
+    },
+    {
+      "page": "/juan",
+      "regex": "^/juan(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan(?:/)?$"
+    },
+    {
+      "page": "/juan/capitulos",
+      "regex": "^/juan/capitulos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/capitulos(?:/)?$"
+    },
+    {
+      "page": "/juan/conclusion",
+      "regex": "^/juan/conclusion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/conclusion(?:/)?$"
+    },
+    {
+      "page": "/juan/estructura",
+      "regex": "^/juan/estructura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/estructura(?:/)?$"
+    },
+    {
+      "page": "/juan/historia",
+      "regex": "^/juan/historia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/historia(?:/)?$"
+    },
+    {
+      "page": "/juan/pasajes",
+      "regex": "^/juan/pasajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/pasajes(?:/)?$"
+    },
+    {
+      "page": "/juan/temas",
+      "regex": "^/juan/temas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/temas(?:/)?$"
+    },
+    {
+      "page": "/juan/teologia",
+      "regex": "^/juan/teologia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/juan/teologia(?:/)?$"
+    },
+    {
+      "page": "/lucas",
+      "regex": "^/lucas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas(?:/)?$"
+    },
+    {
+      "page": "/lucas/capitulos",
+      "regex": "^/lucas/capitulos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/capitulos(?:/)?$"
+    },
+    {
+      "page": "/lucas/conclusion",
+      "regex": "^/lucas/conclusion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/conclusion(?:/)?$"
+    },
+    {
+      "page": "/lucas/estructura",
+      "regex": "^/lucas/estructura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/estructura(?:/)?$"
+    },
+    {
+      "page": "/lucas/historia",
+      "regex": "^/lucas/historia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/historia(?:/)?$"
+    },
+    {
+      "page": "/lucas/pasajes",
+      "regex": "^/lucas/pasajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/pasajes(?:/)?$"
+    },
+    {
+      "page": "/lucas/temas",
+      "regex": "^/lucas/temas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/temas(?:/)?$"
+    },
+    {
+      "page": "/lucas/teologia",
+      "regex": "^/lucas/teologia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/lucas/teologia(?:/)?$"
+    },
+    {
+      "page": "/marcos",
+      "regex": "^/marcos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos(?:/)?$"
+    },
+    {
+      "page": "/marcos/capitulos",
+      "regex": "^/marcos/capitulos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/capitulos(?:/)?$"
+    },
+    {
+      "page": "/marcos/conclusion",
+      "regex": "^/marcos/conclusion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/conclusion(?:/)?$"
+    },
+    {
+      "page": "/marcos/estructura",
+      "regex": "^/marcos/estructura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/estructura(?:/)?$"
+    },
+    {
+      "page": "/marcos/historia",
+      "regex": "^/marcos/historia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/historia(?:/)?$"
+    },
+    {
+      "page": "/marcos/pasajes",
+      "regex": "^/marcos/pasajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/pasajes(?:/)?$"
+    },
+    {
+      "page": "/marcos/temas",
+      "regex": "^/marcos/temas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/temas(?:/)?$"
+    },
+    {
+      "page": "/marcos/teologia",
+      "regex": "^/marcos/teologia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/marcos/teologia(?:/)?$"
+    },
+    {
+      "page": "/mateo",
+      "regex": "^/mateo(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo(?:/)?$"
+    },
+    {
+      "page": "/mateo/capitulos",
+      "regex": "^/mateo/capitulos(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/capitulos(?:/)?$"
+    },
+    {
+      "page": "/mateo/conclusion",
+      "regex": "^/mateo/conclusion(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/conclusion(?:/)?$"
+    },
+    {
+      "page": "/mateo/estructura",
+      "regex": "^/mateo/estructura(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/estructura(?:/)?$"
+    },
+    {
+      "page": "/mateo/historia",
+      "regex": "^/mateo/historia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/historia(?:/)?$"
+    },
+    {
+      "page": "/mateo/pasajes",
+      "regex": "^/mateo/pasajes(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/pasajes(?:/)?$"
+    },
+    {
+      "page": "/mateo/temas",
+      "regex": "^/mateo/temas(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/temas(?:/)?$"
+    },
+    {
+      "page": "/mateo/teologia",
+      "regex": "^/mateo/teologia(?:/)?$",
+      "routeKeys": {},
+      "namedRegex": "^/mateo/teologia(?:/)?$"
+    }
+  ],
+  "dataRoutes": [],
+  "rsc": {
+    "header": "rsc",
+    "varyHeader": "rsc, next-router-state-tree, next-router-prefetch, next-router-segment-prefetch",
+    "prefetchHeader": "next-router-prefetch",
+    "didPostponeHeader": "x-nextjs-postponed",
+    "contentTypeHeader": "text/x-component",
+    "suffix": ".rsc",
+    "prefetchSegmentHeader": "next-router-segment-prefetch",
+    "prefetchSegmentSuffix": ".segment.rsc",
+    "prefetchSegmentDirSuffix": ".segments",
+    "clientParamParsing": false,
+    "dynamicRSCPrerender": false
+  },
+  "rewriteHeaders": {
+    "pathHeader": "x-nextjs-rewritten-path",
+    "queryHeader": "x-nextjs-rewritten-query"
+  }
+}

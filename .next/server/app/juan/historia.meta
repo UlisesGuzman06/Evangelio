@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/juan/layout,_N_T_/juan/historia/layout,_N_T_/juan/historia/page,_N_T_/juan/historia"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/juan/historia/__PAGE__",
+    "/juan/historia",
+    "/juan",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -291,7 +291,8 @@ export function EvangelioDelDia() {
           boxShadow: "0 10px 30px rgba(0,0,0,0.05)",
           border: "1px solid var(--color-border)",
           display: "flex",
-          flexDirection: window.innerWidth < 768 ? "column" : "row",
+          flexDirection: "row",
+          flexWrap: "wrap",
           gap: "2rem",
           alignItems: "center"
         }}>

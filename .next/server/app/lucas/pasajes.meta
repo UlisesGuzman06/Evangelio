@@ -1,0 +1,16 @@
+{
+  "headers": {
+    "x-nextjs-stale-time": "300",
+    "x-nextjs-prerender": "1",
+    "x-next-cache-tags": "_N_T_/layout,_N_T_/lucas/layout,_N_T_/lucas/pasajes/layout,_N_T_/lucas/pasajes/page,_N_T_/lucas/pasajes"
+  },
+  "segmentPaths": [
+    "/_tree",
+    "/_full",
+    "/lucas/pasajes/__PAGE__",
+    "/lucas/pasajes",
+    "/lucas",
+    "/_index",
+    "/_head"
+  ]
+}

@@ -133,8 +133,8 @@
     transform: translateX(0);
   }
 
-  .main-content {
-    margin-left: 280px;
+  .main-layout {
+    padding-left: 280px;
   }
 
   .sidebar-overlay {
